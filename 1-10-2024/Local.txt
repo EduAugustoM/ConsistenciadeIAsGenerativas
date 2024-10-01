@@ -1,64 +1,66 @@
-**Código para encontrar números primos em um intervalo**
-```python
-def é_perfeito(num):
-    """Verifica se um número é perfeito"""
-    soma = 0
-    for i in range(1, num):
-        if num % i == 0:
-            soma += i
-    return soma == num
+Classe Pessoa em Python
+======================
 
-def é_primo(num):
-    """Verifica se um número é primo"""
-    if num < 2:
-        return False
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
-
-def encontrar_numeros_primos(start, end):
-    """Encontra os números primos em um intervalo"""
-    numeros_primos = []
-    for num in range(start, end + 1):
-        if é_primo(num):
-            numeros_primos.append(num)
-    return numeros_primos
-```
-
-**Explicação detalhada do código**
-
-### Função `é_perfeito(num)`
-
-Essa função verifica se um número é perfeito. Um número perfeito é aquele que é igual à soma de seus divisores menores que ele. A lógica dessa função é simples:
-
-1. Inicializa a soma de 0.
-2. Percorre todos os números menores que `num` (a partir de 1).
-3. Se `num` for divisível por algum desses números, adiciona esse número à soma.
-4. Verifica se a soma é igual a `num`. Se sim, então `num` é perfeito.
-
-**Função `é_primo(num)`
-
-Essa função verifica se um número é primo. Um número primo é aquele que não tem divisores menores que ele, exceto 1 e ele mesmo. A lógica dessa função é a seguinte:
-
-1. Verifica se `num` é menor que 2. Se sim, retorne falso, pois 0 e 1 são números primos, mas não precisam ser verificados.
-2. Percorra todos os números menores que a raiz quadrada de `num`.
-3. Se `num` for divisível por algum desses números, então não é primo.
-4. Caso contrário, retorne verdadeiro.
-
-**Função `encontrar_numeros_primos(start, end)`
-
-Essa função encontra os números primos em um intervalo fornecido (`start` e `end`). A lógica dessa função é a seguinte:
-
-1. Inicializa uma lista vazia para armazenar os números primos encontrados.
-2. Percorre todos os números da faixa de `start` a `end`.
-3. Se um número for primo (verificada pela função `é_primo(num)`), adiciona-o à lista.
-4. Retorne a lista com os números primos encontrados.
-
-**Exemplo de uso**
+Aqui está uma implementação básica de uma classe Pessoa em Python:
 
 ```python
-print(encontrar_numeros_primos(1, 100))
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+
+    Atributos:
+        nome (str): O nome da pessoa.
+        idade (int): A idade da pessoa.
+        sexo (str): O sexo da pessoa.
+    """
+
+    def __init__(self, nome, idade, sexo):
+        """
+        Construtor da classe Pessoa.
+
+        :param nome: O nome da pessoa.
+        :param idade: A idade da pessoa.
+        :param sexo: O sexo da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def get_info(self):
+        """
+        Método para obter informações sobre a pessoa.
+
+        :return: Uma string com as informações da pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade} anos, Sexo: {self.sexo}"
+
+    def aumentar_idade(self, anos):
+        """
+        Método para aumentar a idade da pessoa.
+
+        :param anos: A quantidade de anos para aumentar a idade.
+        """
+        self.idade += anos
+
+    @property
+    def idadeAtual(self):
+        return f"Idade atual: {self.idade} anos"
+
+# Exemplo de uso:
+pessoa = Pessoa("João", 25, "Homem")
+print(pessoa.get_info())
+print(pessoa.idadeAtual)
+
+pessoa.aumentar_idade(2)
+print(pessoa.get_info())
 ```
 
-Essa função retorna uma lista com todos os números primos entre 1 e 100 (inclusive).
+Nessa implementação:
+
+*   A classe `Pessoa` tem três atributos: `nome`, `idade` e `sexo`.
+*   O construtor (`__init__`) é usado para inicializar os atributos.
+*   O método `get_info` é usado para obter informações sobre a pessoa.
+*   O método `aumentar_idade` é usado para aumentar a idade da pessoa.
+*   A propriedade `idadeAtual` é usada para obter a idade atual da pessoa.
+
+Essa implementação fornece uma base sólida para representar pessoas em um programa Python. Você pode adicionar mais atributos e métodos conforme necessário.

@@ -1,58 +1,39 @@
-Aqui está o código em Python que resolve o problema de encontrar os números primos em um intervalo fornecido:
-```python
-def is_prime(n):
-    """Verifica se um número é primo"""
-    if n <= 1:
-        return False
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-def find_primes(start, end):
-    """Encontra os números primos em um intervalo"""
-    primes = []
-    for num in range(start, end + 1):
-        if is_prime(num):
-            primes.append(num)
-    return primes
-
-# Exemplo de uso
-start = 10
-end = 50
-primes = find_primes(start, end)
-print(primes)  # [11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+Aqui está um exemplo de como você pode implementar uma classe `Pessoa` em Python:
 ```
-Agora, vamos descrever como o código funciona:
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
 
-**Função `is_prime(n)`**
+    def __str__(self):
+        return f"{self.nome}, {self.idade} anos, {self.endereco}"
 
-Essa função verifica se um número `n` é primo. Ela faz isso verificando se `n` é divisível por qualquer número entre 2 e a raiz quadrada de `n` (incluso). Se `n` for divisível por algum desses números, então não é primo. Caso contrário, é primo.
+    def apresentar(self):
+        print(self)
 
-A lógica por trás disso é que um número primo só pode ser dividido por 1 e por si mesmo. Portanto, se um número for divisível por outro número maior que 1, então não é primo.
+    def aumentar_idade(self):
+        self.idade += 1
 
-**Função `find_primes(start, end)`**
+    def mudar_endereco(self, novo_endereco):
+        self.endereco = novo_endereco
+```
+Aqui está uma explicação de cada método:
 
-Essa função encontra os números primos em um intervalo especificado por `start` e `end`. Ela itera sobre todos os números no intervalo e, para cada número, verifica se é primo usando a função `is_prime(n)`. Se for primo, adiciona-o à lista `primes`.
+* `__init__`: é o método construtor da classe, que é chamado quando uma nova instância da classe é criada. Ele recebe três parâmetros: `nome`, `idade` e `endereco`, e atribui esses valores às propriedades da classe.
+* `__str__`: é um método especial que retorna uma representação textual da instância da classe. Nesse caso, ele retorna uma string que contém o nome, a idade e o endereço da pessoa.
+* `apresentar`: é um método que chama o método `__str__` e imprime a representação textual da pessoa.
+* `aumentar_idade`: é um método que aumenta a idade da pessoa em 1 ano.
+* `mudar_endereco`: é um método que muda o endereço da pessoa para um novo valor.
 
-**Algoritmo**
-
-O algoritmo utilizado é o seguinte:
-
-1. Iterar sobre todos os números no intervalo `[start, end]`.
-2. Para cada número, verificar se é primo usando a função `is_prime(n)`.
-3. Se for primo, adicioná-lo à lista `primes`.
-4. Retornar a lista `primes`.
-
-**Complexidade**
-
-A complexidade do algoritmo é O(n), pois precisamos verificar cada número no intervalo. No entanto, a função `is_prime(n)` tem uma complexidade média de O(√n), pois precisamos verificar se `n` é divisível por números até a raiz quadrada de `n`. Portanto, a complexidade total do algoritmo é O(n√n).
-
-**Melhorias**
-
-Existem algumas melhorias que podem ser feitas nesse algoritmo:
-
-* Em vez de verificar se `n` é divisível por todos os números até a raiz quadrada de `n`, podemos apenas verificar se é divisível por números pares e por 3, pois esses são os únicos divisores possíveis de `n` que não são 1 ou `n` mesmo.
-* Podemos também utilizar uma técnica chamada "sieve of Eratosthenes" para encontrar os números primos em um intervalo. Isso pode ser mais eficiente para grandes intervalos.
-
-No entanto, para intervalos pequenos como o exemplo fornecido, o algoritmo atual é suficiente.
+Aqui está um exemplo de como você pode usar essa classe:
+```
+pessoa = Pessoa("João", 30, "Rua ABC, 123")
+print(pessoa)  # imprime "João, 30 anos, Rua ABC, 123"
+pessoa.apresentar()  # imprime "João, 30 anos, Rua ABC, 123"
+pessoa.aumentar_idade()
+print(pessoa)  # imprime "João, 31 anos, Rua ABC, 123"
+pessoa.mudar_endereco("Rua DEF, 456")
+print(pessoa)  # imprime "João, 31 anos, Rua DEF, 456"
+```
+Espero que isso ajude! Se tiver alguma dúvida adicional, sinta-se à vontade para perguntar.

@@ -1,29 +1,32 @@
-Claro, vou criar um código em Python para encontrar números primos em um intervalo fornecido. Aqui está o código:
+Here's a simple implementation of a `Pessoa` (Person) class in Python:
 
 
 
 ```python
-def eh_primo(n):
-    if n < 2:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-def encontrar_primos(inicio, fim):
-    primos = []
-    for num in range(max(2, inicio), fim + 1):
-        if eh_primo(num):
-            primos.append(num)
-    return primos
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+    
+    def aniversario(self):
+        self.idade += 1
+        return f"Feliz aniversário! Agora tenho {self.idade} anos."
 
 # Exemplo de uso
-inicio = 10
-fim = 50
-lista_primos = encontrar_primos(inicio, fim)
-print(f"Os números primos entre {inicio} e {fim} são: {lista_primos}")
+if __name__ == "__main__":
+    pessoa1 = Pessoa("João", 30)
+    print(pessoa1.apresentar())
+    print(pessoa1.aniversario())
 
 ```
 
-Gostaria que eu explicasse como este código funciona?
+Esta implementação da classe `Pessoa` inclui:
+
+1. Um construtor `__init__` que inicializa o nome e a idade da pessoa.
+2. Um método `apresentar()` que retorna uma string de apresentação.
+3. Um método `aniversario()` que incrementa a idade e retorna uma mensagem.
+
+Você gostaria que eu explicasse alguma parte específica do código ou que adicionasse mais funcionalidades à classe?

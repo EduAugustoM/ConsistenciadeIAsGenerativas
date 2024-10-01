@@ -1,64 +1,29 @@
-Claro! Aqui está um código em Python que encontra os números primos em um intervalo fornecido:
+Claro! Aqui está um exemplo simples de como implementar a classe `Pessoa` em Python:
 
 ```python
-def eh_primo(num):
-    """Verifica se um número é primo."""
-    if num < 2:
-        return False
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
 
-def encontrar_primos(inicio, fim):
-    """Encontra todos os números primos em um intervalo."""
-    primos = []
-    for num in range(inicio, fim + 1):
-        if eh_primo(num):
-            primos.append(num)
-    return primos
+    def saudacao(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
 
 # Exemplo de uso
-inicio = int(input("Digite o início do intervalo: "))
-fim = int(input("Digite o fim do intervalo: "))
-primos = encontrar_primos(inicio, fim)
-print(f"Números primos entre {inicio} e {fim}: {primos}")
+pessoa1 = Pessoa("João", 30)
+print(pessoa1.saudacao())
 ```
 
-### Explicação Detalhada
+Neste exemplo, a classe `Pessoa` possui dois atributos: `nome` e `idade`. O método `saudacao` retorna uma saudação personalizada utilizando esses atributos.
 
-#### Função `eh_primo(num)`
-- **Objetivo**: Verificar se um número é primo.
-- **Lógica**:
-  - Números menores que 2 não são primos.
-  - Para números maiores ou iguais a 2, verifica-se se há algum divisor entre 2 e a raiz quadrada do número (inclusive). Se houver, o número não é primo.
-  - Se nenhum divisor for encontrado, o número é primo.
-
-#### Função `encontrar_primos(inicio, fim)`
-- **Objetivo**: Encontrar todos os números primos dentro de um intervalo especificado.
-- **Lógica**:
-  - Inicializa uma lista vazia para armazenar os números primos.
-  - Itera sobre cada número no intervalo fornecido (de `inicio` a `fim`).
-  - Utiliza a função `eh_primo` para verificar se o número é primo. Se for, adiciona-o à lista de primos.
-  - Retorna a lista de números primos encontrados.
-
-#### Exemplo de Uso
-- Solicita ao usuário que insira o início e o fim do intervalo.
-- Chama a função `encontrar_primos` com esses valores e imprime a lista de números primos encontrados.
-
-### Algoritmo e Lógica
-1. **Entrada de Dados**: O usuário fornece o intervalo (início e fim).
-2. **Verificação de Primalidade**: Para cada número no intervalo, verifica-se se ele é primo utilizando a função `eh_primo`.
-3. **Armazenamento e Saída**: Os números primos são armazenados em uma lista e exibidos ao usuário.
-
-Esse código é eficiente porque reduz o número de verificações necessárias ao verificar divisores apenas até a raiz quadrada do número, em vez de até o próprio número. Isso torna a verificação de primalidade mais rápida, especialmente para números grandes.
+Se precisar de mais alguma coisa ou tiver alguma dúvida, estou aqui para ajudar!
 
 Fonte: conversa com o Copilot, 01/10/2024
-(1) Exercício Python #052 - Números primos. https://www.youtube.com/watch?v=Er5Hyd4LyVw.
-(2) Identificando números primos em Python. https://www.youtube.com/watch?v=bxCflvjvacU.
-(3) Algoritmo para determinar se um número é primo em Python. https://www.youtube.com/watch?v=xrhsmEq6gCo.
-(4) Como Gerar Números Primos em Python. https://bing.com/search?q=c%c3%b3digo+Python+encontrar+n%c3%bameros+primos+intervalo.
-(5) Como Gerar Números Primos em Python. https://www.pythonprogressivo.net/2018/10/Como-Saber-Numero-Primo-Python.html.
-(6) Números Primos em Python - Francisco Chaves. https://franciscochaves.com.br/blog/numeros-primos-em-python/.
-(7) python - Imprimir números primos no intervalo 0-N - Stack Overflow em .... https://pt.stackoverflow.com/questions/478977/imprimir-n%c3%bameros-primos-no-intervalo-0-n.
-(8) Primos em Python - Como Saber se um Número é Primo - Python Progressivo. https://www.pythonprogressivo.net/2018/06/Primos-Python-Como-Saber-Numero-e-Primo.html.
+(1) Métodos de Classes - Python Orientado a Objetos - Aula 36. https://www.youtube.com/watch?v=ZTKeC1lae6I.
+(2) Python Classes e Métodos - Em Menos de 10 Minutos [FÁCIL]. https://www.youtube.com/watch?v=j6B8shHXzks.
+(3) Como Funcionam Classes e Programação Orientada a Objetos em Python - Aprenda em 10 Minutos!. https://www.youtube.com/watch?v=97A_Cyyh-eU.
+(4) Python Class: Aprenda a programar com exemplos práticos - Awari. https://bing.com/search?q=implemente+a+classe+pessoa+em+python.
+(5) Python Class: Aprenda a programar com exemplos práticos - Awari. https://awari.com.br/python-class-aprenda-a-programar-com-exemplos-praticos/.
+(6) Guia Completo sobre Classes em Python: Conceitos Fundamentais e .... https://www.covildodev.com.br/artigo/classes-python.
+(7) Como criar minha primeira classe em Python - DevMedia. https://www.devmedia.com.br/como-criar-minha-primeira-classe-em-python/38912.
+(8) Classes e Objetos no Python - Python Academy. https://pythonacademy.com.br/blog/classes-e-objetos-no-python.

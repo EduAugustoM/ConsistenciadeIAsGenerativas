@@ -1,67 +1,50 @@
-## Código em Python para Encontrar Números Primos em um Intervalo
-
-Aqui está um código em Python que encontra todos os números primos em um intervalo fornecido pelo usuário:
+Claro! Vamos implementar uma classe `Pessoa` em Python. Essa classe pode incluir atributos básicos como nome, idade e um método para exibir informações sobre a pessoa. Aqui está um exemplo simples:
 
 ```python
-def is_prime(n):
-    """Verifica se um número é primo."""
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+class Pessoa:
+    def __init__(self, nome, idade):
+        """
+        Inicializa a instância da classe Pessoa.
 
-def find_primes_in_range(start, end):
-    """Encontra todos os números primos em um intervalo."""
-    primes = []
-    for num in range(start, end + 1):
-        if is_prime(num):
-            primes.append(num)
-    return primes
+        :param nome: Nome da pessoa.
+        :param idade: Idade da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
 
-# Solicita ao usuário o intervalo
-start = int(input("Digite o início do intervalo: "))
-end = int(input("Digite o fim do intervalo: "))
+    def apresentar(self):
+        """
+        Exibe uma apresentação da pessoa.
+        """
+        print(f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos.")
 
-# Encontra e exibe os números primos no intervalo
-primes = find_primes_in_range(start, end)
-print(f"Números primos entre {start} e {end}: {primes}")
+    def fazer_aniversario(self):
+        """
+        Incrementa a idade da pessoa em 1 ano.
+        """
+        self.idade += 1
+        print(f"Feliz aniversário, {self.nome}! Agora você tem {self.idade} anos.")
+
+# Exemplo de uso da classe Pessoa
+if __name__ == "__main__":
+    pessoa1 = Pessoa("Alice", 30)
+    pessoa1.apresentar()  # Saída: Olá, meu nome é Alice e eu tenho 30 anos.
+    
+    pessoa1.fazer_aniversario()  # Saída: Feliz aniversário, Alice! Agora você tem 31 anos.
 ```
 
-## Explicação Detalhada do Código
+## Explicação do Código
 
-### Estrutura do Código
+### Atributos da Classe
+- **`nome`**: Armazena o nome da pessoa.
+- **`idade`**: Armazena a idade da pessoa.
 
-O código é dividido em duas funções principais:
+### Métodos da Classe
+- **`__init__`**: Método construtor que inicializa os atributos `nome` e `idade`.
+- **`apresentar`**: Método que imprime uma mensagem de apresentação.
+- **`fazer_aniversario`**: Método que incrementa a idade em um ano e imprime uma mensagem de aniversário.
 
-1. **`is_prime(n)`**: Verifica se um número `n` é primo.
-2. **`find_primes_in_range(start, end)`**: Encontra todos os números primos entre `start` e `end`.
+### Exemplo de Uso
+No bloco `if __name__ == "__main__":`, criamos uma instância da classe `Pessoa`, chamamos o método `apresentar`, e depois chamamos o método `fazer_aniversario`.
 
-### Função `is_prime(n)`
-
-- **Objetivo**: Determinar se um número é primo.
-- **Lógica**:
-  - Um número é considerado primo se for maior que 1 e não tiver divisores além de 1 e ele mesmo.
-  - Se `n` for menor ou igual a 1, a função retorna `False`.
-  - Para números maiores que 1, a função verifica se `n` é divisível por qualquer número de 2 até a raiz quadrada de `n`. Isso é feito porque, se `n` tiver um divisor maior que sua raiz quadrada, o outro divisor deve ser menor que a raiz quadrada.
-  - Se encontrar um divisor (ou seja, `n % i == 0`), retorna `False`. Caso contrário, retorna `True`, indicando que o número é primo.
-
-### Função `find_primes_in_range(start, end)`
-
-- **Objetivo**: Encontrar todos os números primos dentro de um intervalo definido por `start` e `end`.
-- **Lógica**:
-  - Inicializa uma lista vazia chamada `primes` para armazenar os números primos encontrados.
-  - Utiliza um loop que percorre todos os números de `start` até `end`, inclusive.
-  - Para cada número no intervalo, chama a função `is_prime(num)`. Se a função retornar `True`, o número é adicionado à lista `primes`.
-  - Após verificar todos os números no intervalo, a função retorna a lista de números primos.
-
-### Interação com o Usuário
-
-- O código solicita ao usuário que insira o início e o fim do intervalo através da função `input()`.
-- Os valores inseridos são convertidos para inteiros e passados para a função `find_primes_in_range()`.
-- Por fim, imprime os números primos encontrados no intervalo especificado.
-
-## Conclusão
-
-Este código é uma implementação simples e eficaz para encontrar números primos em um intervalo fornecido. Ele utiliza conceitos básicos de programação como loops, condicionais e funções, tornando-o acessível para iniciantes em Python. Além disso, a lógica utilizada na verificação da primalidade é eficiente para intervalos moderados.
+Sinta-se à vontade para modificar ou expandir essa classe conforme necessário! Se precisar de mais funcionalidades ou alguma outra implementação específica, é só avisar!
