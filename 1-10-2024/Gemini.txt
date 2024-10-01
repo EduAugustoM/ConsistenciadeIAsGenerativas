@@ -1,0 +1,90 @@
+## Encontrando Números Primos em Python: Uma Abordagem Detalhada
+
+**Problema:** Encontrar todos os números primos dentro de um intervalo definido pelo usuário.
+
+**Solução em Python:**
+
+```python
+def is_prime(num):
+  """Verifica se um número é primo.
+
+  Args:
+    num: O número a ser verificado.
+
+  Returns:
+    True se o número for primo, False caso contrário.
+  """
+
+  if num <= 1:
+    return False
+  if num <= 3:
+    return True
+  if num % 2 == 0 or num % 3 == 0:
+    return False
+  i = 5
+  while i * i <= num:
+    if num % i == 0 or num % (i + 2) == 0:
+      return False
+    i += 6
+  return True
+
+def find_primes(start, end):
+  """Encontra todos os números primos em um intervalo.
+
+  Args:
+    start: O início do intervalo.
+    end: O fim do intervalo.
+
+  Returns:
+    Uma lista contendo todos os números primos no intervalo.
+  """
+
+  primes = []
+  for num in range(start, end + 1):
+    if is_prime(num):
+      primes.append(num)
+  return primes
+
+# Exemplo de uso:
+start = 2
+end = 100
+result = find_primes(start, end)
+print(f"Os números primos entre {start} e {end} são: {result}")
+```
+
+**Explicação detalhada:**
+
+1. **Função `is_prime(num)`:**
+   * **Objetivo:** Verifica se um número individual é primo.
+   * **Lógica:**
+     * **Casos base:** Números menores ou iguais a 1 não são primos, 2 e 3 são primos.
+     * **Divisibilidade por 2 e 3:** Se o número for divisível por 2 ou 3, não é primo.
+     * **Loop principal:** Verifica a divisibilidade por números da forma 6k ± 1, pois todos os primos maiores que 3 podem ser escritos dessa forma. O loop otimiza a verificação, reduzindo o número de divisões necessárias.
+
+2. **Função `find_primes(start, end)`:**
+   * **Objetivo:** Encontra todos os números primos em um intervalo dado.
+   * **Lógica:**
+     * **Iteração:** Percorre todos os números do intervalo `start` até `end`.
+     * **Verificação:** Para cada número, chama a função `is_prime` para verificar se é primo.
+     * **Acumulação:** Se o número for primo, ele é adicionado à lista `primes`.
+
+**Algoritmo:**
+* **Crivo de Eratóstenes otimizado:** A função `is_prime` utiliza uma versão otimizada do Crivo de Eratóstenes, verificando apenas divisores da forma 6k ± 1.
+* **Iteração simples:** A função `find_primes` itera sobre todos os números no intervalo, verificando a primalidade de cada um.
+
+**Otimizações:**
+* **Casos base:** A função `is_prime` trata os casos base de forma eficiente.
+* **Divisores:** A verificação da divisibilidade é otimizada, reduzindo o número de iterações.
+* **Loop:** O loop na função `is_prime` é otimizado para verificar apenas divisores da forma 6k ± 1.
+
+**Exemplo de uso:**
+* O código define um intervalo de 2 a 100.
+* Chama a função `find_primes` para encontrar os números primos nesse intervalo.
+* Imprime os resultados.
+
+**Melhorias:**
+* **Maior eficiência:** Para intervalos muito grandes, algoritmos mais sofisticados como o Crivo de Atkin podem ser utilizados.
+* **Paralelização:** A verificação de primalidade pode ser paralelizada para obter melhor desempenho em máquinas com múltiplos núcleos.
+* **Bibliotecas:** Algumas bibliotecas de matemática oferecem funções otimizadas para encontrar números primos.
+
+**Este código fornece uma solução eficiente e bem explicada para o problema de encontrar números primos em um intervalo dado.**

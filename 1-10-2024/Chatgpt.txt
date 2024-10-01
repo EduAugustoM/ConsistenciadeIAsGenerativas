@@ -1,0 +1,53 @@
+Aqui está um código Python que encontra todos os números primos em um intervalo fornecido pelo usuário:
+
+```python
+def eh_primo(n):
+  if n < 2:
+    return False
+  for i in range(2, int(n ** 0.5) + 1):
+    if n % i == 0:
+      return False
+  return True
+
+def encontrar_primos(inicio, fim):
+  primos = []
+  for num in range(inicio, fim + 1):
+    if eh_primo(num):
+      primos.append(num)
+  return primos
+
+# Exemplo de uso
+inicio_intervalo = 10
+fim_intervalo = 50
+primos_no_intervalo = encontrar_primos(inicio_intervalo, fim_intervalo)
+print(f"Números primos entre {inicio_intervalo} e {fim_intervalo}: {primos_no_intervalo}")
+```
+
+### Explicação Detalhada:
+
+#### Algoritmo
+O problema de encontrar números primos em um intervalo envolve testar se cada número dentro do intervalo é primo. Um número primo é aquele que é divisível apenas por 1 e por ele mesmo, e para otimizar a verificação de primalidade, podemos parar de verificar divisores após a raiz quadrada do número.
+
+1. **Função `eh_primo(n)`**:
+   - Esta função verifica se um número `n` é primo. A lógica é:
+     - Se `n` for menor que 2, retorna `False`, pois números menores que 2 não são primos.
+     - Caso contrário, o loop verifica se `n` tem algum divisor entre 2 e a raiz quadrada de `n`. Se encontrar um divisor, o número não é primo, e a função retorna `False`.
+     - Se não forem encontrados divisores, o número é primo, e a função retorna `True`.
+
+2. **Função `encontrar_primos(inicio, fim)`**:
+   - Esta função itera sobre todos os números no intervalo definido pelos parâmetros `inicio` e `fim`.
+   - Para cada número do intervalo, a função `eh_primo` é chamada para verificar se o número é primo.
+   - Se o número for primo, ele é adicionado à lista `primos`.
+   - No final, a função retorna a lista de todos os números primos no intervalo.
+
+#### Lógica:
+- **Verificação de primalidade otimizada**:
+  Em vez de verificar todos os números até `n-1` para ver se `n` é divisível, o loop dentro da função `eh_primo` verifica apenas até a raiz quadrada de `n` (`int(n ** 0.5) + 1`). Isso reduz significativamente o número de iterações, melhorando o desempenho do código, especialmente para números maiores.
+
+#### Exemplo de uso:
+No exemplo dado, a função `encontrar_primos(10, 50)` vai verificar todos os números entre 10 e 50 e encontrar os números primos nesse intervalo. A lista resultante será impressa como a saída.
+
+#### Output esperado:
+```
+Números primos entre 10 e 50: [11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+```
