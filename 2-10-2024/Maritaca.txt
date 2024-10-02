@@ -1,0 +1,17 @@
+Claro! Abaixo você encontrará um exemplo simples de como implementar a classe `Pessoa` em Python. Esta classe terá dois atributos: `nome` e `idade`, e um método chamado `apresentar` que retorna uma string com o nome e a idade da pessoa.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+
+# Exemplo de uso da classe Pessoa
+pessoa1 = Pessoa("Alice", 30)
+print(pessoa1.apresentar())  # Saída: Olá, meu nome é Alice e eu tenho 30 anos.
+```
+
+Você pode adicionar mais métodos e atributos conforme a necessidade da sua aplicação. Por exemplo, você pode adicionar um método para alterar o nome ou a idade, ou ainda um método para calcular o ano de nascimento com base na idade atual e no ano corrente.

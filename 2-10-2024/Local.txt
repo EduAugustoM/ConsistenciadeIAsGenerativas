@@ -1,0 +1,128 @@
+**Classe Pessoa em Python**
+=====================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    
+    Atributos:
+        nome (str): Nome da pessoa.
+        idade (int): Idade da pessoa.
+        endereço (dict): Endereço da pessoa.
+    """
+
+    def __init__(self, nome, idade, endereço):
+        """
+        Inicialização da classe Pessoa.
+        
+        :param nome: Nome da pessoa.
+        :type nome: str
+        :param idade: Idade da pessoa.
+        :type idade: int
+        :param endereço: Endereço da pessoa.
+        :type endereço: dict
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereço = endereço
+
+    def get_nome(self):
+        """
+        Get o nome da pessoa.
+        
+        :return: Nome da pessoa.
+        :rtype: str
+        """
+        return self.nome
+
+    def set_nome(self, nome):
+        """
+        Set o nome da pessoa.
+        
+        :param nome: Nome da pessoa.
+        :type nome: str
+        """
+        self.nome = nome
+
+    def get_idade(self):
+        """
+        Get a idade da pessoa.
+        
+        :return: Idade da pessoa.
+        :rtype: int
+        """
+        return self.idade
+
+    def set_idade(self, idade):
+        """
+        Set a idade da pessoa.
+        
+        :param idade: Idade da pessoa.
+        :type idade: int
+        """
+        self.idade = idade
+
+    def get_endereço(self):
+        """
+        Get o endereço da pessoa.
+        
+        :return: Endereço da pessoa.
+        :rtype: dict
+        """
+        return self.endereço
+
+    def set_endereço(self, endereço):
+        """
+        Set o endereço da pessoa.
+        
+        :param endereço: Endereço da pessoa.
+        :type endereço: dict
+        """
+        self.endereço = endereço
+
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    pessoa1 = Pessoa("João", 30, {"rua": "Teste", "cidade": "São Paulo"})
+    
+    print(f"Nome: {pessoa1.get_nome()}")
+    print(f"Idade: {pessoa1.get_idade()}")
+    print(f"Endereço: {pessoa1.get_endereço()}")
+    
+    pessoa1.set_nome("Pedro")
+    pessoa1.set_idade(35)
+    pessoa1.set_endereço({"rua": "Teste 2", "cidade": "São Paulo"})
+    
+    print(f"Nome após atualização: {pessoa1.get_nome()}")
+    print(f"Idade após atualização: {pessoa1.get_idade()}")
+    print(f"Endereço após atualização: {pessoa1.get_endereço()}")
+```
+
+**Exemplo de uso da classe Pessoa**
+-------------------------------------
+
+No exemplo acima, criamos uma instância da classe `Pessoa` chamada `pessoa1`, com os seguintes atributos:
+
+*   Nome: "João"
+*   Idade: 30
+*   Endereço: {"rua": "Teste", "cidade": "São Paulo"}
+
+Em seguida, chamamos os métodos getters e setters para obter e atualizar os atributos da pessoa.
+
+**Métodos da classe Pessoa**
+---------------------------
+
+A classe `Pessoa` tem os seguintes métodos:
+
+*   `__init__`: Inicialização da classe.
+*   `get_nome`, `set_nome`: Get e set do atributo `nome`.
+*   `get_idade`, `set_idade`: Get e set do atributo `idade`.
+*   `get_endereço`, `set_endereço`: Get e set do atributo `endereço`.
+
+**Observação**
+--------------
+
+Lembre-se de que a classe `Pessoa` é apenas um exemplo básico e pode ser melhorada dependendo das necessidades específicas da aplicação. Além disso, a implementação dos métodos getters e setters pode variar dependendo do estilo de programação escolhido.

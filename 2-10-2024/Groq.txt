@@ -1,0 +1,40 @@
+Aqui está um exemplo de como você pode implementar uma classe "Pessoa" em Python:
+```
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def __str__(self):
+        return f"{self.nome}, {self.idade} anos, {self.endereco}"
+
+    def idade_completa(self):
+        return f"{self.idade} anos"
+
+    def endereco_completo(self):
+        return f"{self.endereco}"
+
+    def apresentar(self):
+        print(f"Olá, eu sou {self.nome}.")
+        print(f"Tenho {self.idade} anos.")
+        print(f"Meu endereço é {self.endereco}.")
+```
+Aqui está uma explicação de como funciona:
+
+* A classe `Pessoa` tem um método construtor `__init__` que é chamado quando uma instância da classe é criada. Esse método recebe três parâmetros: `nome`, `idade` e `endereco`, que são armazenados como atributos da classe.
+* O método `__str__` é usado para retornar uma representação string da instância da classe. Nesse caso, ele retorna uma string que contém o nome, a idade e o endereço da pessoa.
+* Os métodos `idade_completa` e `endereco_completo` são usados para retornar a idade e o endereço da pessoa, respectivamente, em uma forma mais detalhada.
+* O método `apresentar` é usado para imprimir uma apresentação da pessoa, incluindo seu nome, idade e endereço.
+
+Aqui está um exemplo de como você pode usar essa classe:
+```
+pessoa = Pessoa("João", 30, "Rua ABC, 123")
+print(pessoa)  # Output: João, 30 anos, Rua ABC, 123
+print(pessoa.idade_completa())  # Output: 30 anos
+print(pessoa.endereco_completo())  # Output: Rua ABC, 123
+pessoa.apresentar()  # Output: Olá, eu sou João.
+                     #          Tenho 30 anos.
+                     #          Meu endereço é Rua ABC, 123.
+```
+Espero que isso ajude! Se tiver alguma dúvida ou precisar de mais ajuda, basta perguntar.
