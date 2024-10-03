@@ -1,0 +1,72 @@
+**Classe Pessoa em Python**
+=====================================
+
+Aqui está uma implementação básica da classe Pessoa em Python, incluindo atributos e métodos para representar uma pessoa.
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    def __init__(self, nome, idade, endereco):
+        """
+        Inicializa um objeto Pessoa com o nome, idade e endereço.
+
+        :param nome: Nome da pessoa.
+        :param idade: Idade da pessoa.
+        :param endereco: Endereço da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def __str__(self):
+        """
+        Representa o objeto Pessoa como uma string.
+
+        :return: Uma string com informações da pessoa.
+        """
+        return f"Nome: {self.nome}\nIdade: {self.idade} anos\nEndereço: {self.endereco}"
+
+    def get_idade(self):
+        """
+        Retorna a idade da pessoa.
+
+        :return: A idade da pessoa.
+        """
+        return self.idade
+
+    def set_idade(self, idade):
+        """
+        Atualiza a idade da pessoa.
+
+        :param idade: A nova idade da pessoa.
+        """
+        self.idade = idade
+```
+
+**Exemplo de Uso**
+-------------------
+
+```python
+# Cria um objeto Pessoa com o nome "João", idade 30 e endereço "Rua XYZ, 123"
+pessoa1 = Pessoa("João", 30, "Rua XYZ, 123")
+
+# Imprime as informações da pessoa
+print(pessoa1)
+
+# Retorna a idade da pessoa
+idade = pessoa1.get_idade()
+print(f"A idade de {pessoa1.nome} é: {idade} anos")
+
+# Atualiza a idade da pessoa
+pessoa1.set_idade(31)
+idade = pessoa1.get_idade()
+print(f"A idade atual de {pessoa1.nome} é: {idade} anos")
+```
+
+**Conclusão**
+----------
+
+Essa implementação da classe Pessoa em Python fornece uma estrutura básica para representar uma pessoa, incluindo atributos e métodos para acessar e modificar esses atributos. A classe pode ser estendida ou modificada de acordo com as necessidades específicas do problema que está sendo resolvido.

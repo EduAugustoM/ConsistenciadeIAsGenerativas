@@ -1,0 +1,27 @@
+Here is a simple implementation of a `Pessoa` (Person) class in Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def cumprimentar(self):
+        print(f"Olá, meu nome é {self.nome} e tenho {self.idade} anos.")
+
+# Example usage:
+p1 = Pessoa("João", 25)
+p1.cumprimentar()  # Output: Olá, meu nome é João e tenho 25 anos.
+```
+
+This class has two attributes: `nome` (name) and `idade` (age), and a method `cumprimentar` (greet) that prints a greeting message.
+
+Here are some actionable steps you can take to use this class:
+
+1. Create an instance of the `Pessoa` class by calling `Pessoa` with the person's name and age as arguments, and assign the result to a variable.
+2. Call the `cumprimentar` method on the instance to make the person greet themselves.
+3. You can also access the `nome` and `idade` attributes directly to get the person's name and age.
+4. If you want to change the person's name or age, you can assign a new value to the `nome` or `idade` attribute.
+5. You can create multiple instances of the `Pessoa` class to represent different people.
+
+This is just a basic implementation of a `Pessoa` class. Depending on your needs, you might want to add more attributes or methods to the class. For example, you could add a method to calculate the person's age in months or days, or a method to check if the person is an adult or a minor.

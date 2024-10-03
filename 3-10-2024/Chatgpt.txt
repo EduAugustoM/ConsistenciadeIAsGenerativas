@@ -1,0 +1,27 @@
+Aqui está uma implementação básica da classe `Pessoa` em Python, com atributos como nome, idade e métodos para obter e modificar essas informações:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade):
+    self.nome = nome
+    self.idade = idade
+
+  def obter_informacoes(self):
+    return f'Nome: {self.nome}, Idade: {self.idade}'
+
+  def aniversario(self):
+    self.idade += 1
+    return f'Feliz aniversário, {self.nome}! Agora você tem {self.idade} anos.'
+
+# Exemplo de uso:
+pessoa1 = Pessoa("João", 30)
+print(pessoa1.obter_informacoes())  # Saída: Nome: João, Idade: 30
+print(pessoa1.aniversario())        # Saída: Feliz aniversário, João! Agora você tem 31 anos.
+```
+
+Essa classe inclui:
+- Construtor `__init__` para inicializar o nome e a idade.
+- Método `obter_informacoes` para retornar uma string com as informações da pessoa.
+- Método `aniversario` para incrementar a idade em 1 ano e exibir uma mensagem de aniversário.
+
+Se precisar de mais funcionalidades ou ajustes, posso modificar!
