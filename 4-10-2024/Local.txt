@@ -1,0 +1,121 @@
+Classe Pessoa
+================
+
+Aqui está uma implementação básica de uma classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+
+    Atributos:
+        - nome (str): o nome da pessoa.
+        - idade (int): a idade da pessoa.
+        - email (str): o e-mail da pessoa.
+    """
+
+    def __init__(self, nome, idade, email):
+        """
+        Inicialização da classe Pessoa.
+
+        Args:
+            nome (str): o nome da pessoa.
+            idade (int): a idade da pessoa.
+            email (str): o e-mail da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.email = email
+
+    def __str__(self):
+        """
+        Representação da classe Pessoa como uma string.
+
+        Returns:
+            str: uma string que representa a pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, E-mail: {self.email}"
+
+    def get_nome(self):
+        """
+        Gets o nome da pessoa.
+
+        Returns:
+            str: o nome da pessoa.
+        """
+        return self.nome
+
+    def set_nome(self, nome):
+        """
+        Sets o nome da pessoa.
+
+        Args:
+            nome (str): o novo nome da pessoa.
+        """
+        self.nome = nome
+
+    def get_idade(self):
+        """
+        Gets a idade da pessoa.
+
+        Returns:
+            int: a idade da pessoa.
+        """
+        return self.idade
+
+    def set_idade(self, idade):
+        """
+        Sets a idade da pessoa.
+
+        Args:
+            idade (int): a nova idade da pessoa.
+        """
+        self.idade = idade
+
+    def get_email(self):
+        """
+        Gets o e-mail da pessoa.
+
+        Returns:
+            str: o e-mail da pessoa.
+        """
+        return self.email
+
+    def set_email(self, email):
+        """
+        Sets o e-mail da pessoa.
+
+        Args:
+            email (str): o novo e-mail da pessoa.
+        """
+        self.email = email
+```
+
+Exemplos de uso
+-----------------
+
+```python
+# Criação de uma pessoa
+pessoa1 = Pessoa("João", 30, "joao@example.com")
+
+# Impressão do nome, idade e e-mail da pessoa
+print(pessoa1)
+
+# Acesso aos atributos da pessoa
+print(f"Nome: {pessoa1.get_nome()}, Idade: {pessoa1.get_idade()}, E-mail: {pessoa1.get_email()}")
+
+# Alteração dos atributos da pessoa
+pessoa1.set_nome("Pedro")
+pessoa1.set_idade(35)
+pessoa1.set_email("pedro@example.com")
+
+# Impressão após alterações
+print(pessoa1)
+```
+
+Observações
+------------
+
+- A classe `Pessoa` é uma implementação básica e pode ser extendida com mais atributos e métodos.
+- Os métodos `get_` e `set_` são usados para acessar e modificar os atributos da pessoa, respectivamente. Isso ajuda a manter o código organizado e fácil de ler.
+- A classe pode ser utilizada em qualquer aplicativo que necessite representar pessoas, como um sistema de gerenciamento de usuários ou um aplicativo de login.
