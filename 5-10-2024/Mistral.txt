@@ -1,0 +1,45 @@
+Claro! Vou implementar uma classe `Pessoa` em Python com alguns atributos e métodos básicos. Vamos começar com atributos como nome, idade e endereço, e métodos para exibir informações e atualizar o endereço.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def exibir_informacoes(self):
+        print(f"Nome: {self.nome}")
+        print(f"Idade: {self.idade}")
+        print(f"Endereço: {self.endereco}")
+
+    def atualizar_endereco(self, novo_endereco):
+        self.endereco = novo_endereco
+        print(f"Endereço atualizado para: {self.endereco}")
+
+# Exemplo de uso
+pessoa1 = Pessoa("João", 30, "Rua A, 123")
+pessoa1.exibir_informacoes()
+
+pessoa1.atualizar_endereco("Rua B, 456")
+pessoa1.exibir_informacoes()
+```
+
+### Explicação:
+
+1. **Construtor (`__init__`):**
+   - Inicializa os atributos `nome`, `idade` e `endereco`.
+
+2. **Método `exibir_informacoes`:**
+   - Exibe as informações da pessoa (nome, idade e endereço).
+
+3. **Método `atualizar_endereco`:**
+   - Atualiza o endereço da pessoa e exibe uma mensagem confirmando a atualização.
+
+### Exemplo de uso:
+
+- Cria uma instância da classe `Pessoa` com o nome "João", idade 30 e endereço "Rua A, 123".
+- Exibe as informações da pessoa.
+- Atualiza o endereço para "Rua B, 456".
+- Exibe as informações atualizadas da pessoa.
+
+Você pode expandir essa classe adicionando mais atributos e métodos conforme necessário.

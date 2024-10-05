@@ -1,0 +1,70 @@
+**Classe Pessoa em Python**
+==========================
+
+Aqui está uma implementação básica da classe Pessoa em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        """
+        Inicializa uma nova instância da classe Pessoa.
+
+        :param nome: O nome do indivíduo.
+        :param idade: A idade do indivíduo.
+        """
+        self.nome = nome
+        self.idade = idade
+
+    def __str__(self):
+        """
+        Devolve uma string que representa a pessoa de forma humanível.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade} anos"
+
+    def aumenta_idade(self, anos):
+        """
+        Aumenta a idade do indivíduo.
+
+        :param anos: O número de anos a ser adicionado à idade atual.
+        """
+        self.idade += anos
+
+    def diminui_idade(self, anos):
+        """
+        Diminui a idade do indivíduo.
+
+        :param anos: O número de anos a ser subtraído da idade atual. A idade não pode ficar abaixo de 0.
+        """
+        if anos < 0:
+            raise ValueError("A idade não pode ser diminuída abaixo de 0.")
+        self.idade = max(0, self.idade - anos)
+```
+
+**Exemplos de uso:**
+
+```python
+# Criação de uma nova instância da classe Pessoa
+pessoa1 = Pessoa("João", 25)
+
+# Imprimindo a pessoa
+print(pessoa1)  # Saída: Nome: João, Idade: 25 anos
+
+# Aumentando a idade do indivíduo
+pessoa1.aumenta_idade(5)
+print(pessoa1)  # Saída: Nome: João, Idade: 30 anos
+
+# Diminuindo a idade do indivíduo
+try:
+    pessoa1.diminui_idade(3)
+except ValueError as e:
+    print(e)  # Saída: A idade não pode ser diminuída abaixo de 0.
+
+# Outro exemplo
+pessoa2 = Pessoa("Maria", 30)
+
+print(pessoa2.idade)  # Saída: 30
+pessoa2.diminui_idade(10)
+print(pessoa2.idade)  # Saída: 20
+```
+
+Essa implementação fornece métodos para manipular a idade do indivíduo, como aumentar ou diminuir a idade. A classe também possui um método `__str__` para devolver uma string que representa a pessoa de forma humanível.
