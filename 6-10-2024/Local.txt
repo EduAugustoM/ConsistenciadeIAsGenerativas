@@ -1,0 +1,74 @@
+**Classe Pessoa em Python**
+================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    def __init__(self, nome, idade, sexo):
+        """
+        Inicializa um objeto Pessoa.
+
+        :param nome: Nome da pessoa.
+        :type nome: str
+        :param idade: Idade da pessoa.
+        :type idade: int
+        :param sexo: Sexo da pessoa (masculino ou feminino).
+        :type sexo: str
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def __str__(self):
+        """
+        Retorna uma string representando a pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Sexo: {self.sexo}"
+
+    def incrementa_idade(self, anos):
+        """
+        Incrementa a idade da pessoa.
+
+        :param anos: Número de anos para incrementar a idade.
+        :type anos: int
+        """
+        self.idade += anos
+
+    def verifica_sexo(self):
+        """
+        Verifica se o sexo é masculino ou feminino.
+        """
+        if self.sexo.lower() == "masculino":
+            return True
+        elif self.sexo.lower() == "feminino":
+            return False
+        else:
+            raise ValueError("Sexo inválido")
+
+# Exemplo de uso:
+pessoa = Pessoa("João", 25, "masculino")
+print(pessoa)  # Output: Nome: João, Idade: 25, Sexo: masculino
+
+pessoa.incrementa_idade(5)
+print(pessoa.idade)  # Output: 30
+```
+**Explicação**
+
+A classe `Pessoa` tem os seguintes atributos:
+
+*   `nome`: O nome da pessoa.
+*   `idade`: A idade da pessoa.
+*   `sexo`: O sexo da pessoa.
+
+Os métodos da classe são:
+
+*   `__init__`: Inicializa um objeto Pessoa com os parâmetros `nome`, `idade` e `sexo`.
+*   `__str__`: Retorna uma string representando a pessoa.
+*   `incrementa_idade`: Incrementa a idade da pessoa em um número de anos especificado.
+*   `verifica_sexo`: Verifica se o sexo é masculino ou feminino.
+
+O exemplo de uso demonstra como criar um objeto Pessoa, incrementar sua idade e verificar seu sexo.
