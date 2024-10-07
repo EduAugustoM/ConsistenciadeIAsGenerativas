@@ -1,0 +1,71 @@
+**Classe Pessoa em Python**
+=====================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    def __init__(self, nome, idade, email):
+        """
+        Inicializa um objeto Pessoa.
+
+        Args:
+            nome (str): Nome da pessoa.
+            idade (int): Idade da pessoa.
+            email (str): Email da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.email = email
+
+    def __str__(self):
+        """
+        Return a string representation of the object.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Email: {self.email}"
+
+    def get_idade(self):
+        """
+        Return a value indicating whether or not the person is an adult.
+
+        Returns:
+            bool: True if the person is an adult, False otherwise.
+        """
+        return self.idade >= 18
+
+    def update_email(self, novo_email):
+        """
+        Update o email da pessoa.
+
+        Args:
+            novo_email (str): Novo email da pessoa.
+        """
+        self.email = novo_email
+```
+**Exemplo de Uso**
+--------------------
+
+Aqui está um exemplo de como criar e usar a classe `Pessoa`:
+```python
+# Crie uma pessoa
+pessoa1 = Pessoa("João", 25, "joao@example.com")
+
+# Imprima os dados da pessoa
+print(pessoa1)
+
+# Verifique se a pessoa é adulta
+if pessoa1.get_idade():
+    print(f"{pessoa1.nome} é um adulto.")
+else:
+    print(f"{pessoa1.nome} não é um adulto.")
+
+# Atualize o email da pessoa
+pessoa1.update_email("joao2@example.com")
+
+# Imprima os dados atualizados da pessoa
+print(pessoa1)
+```
+Espero que isso ajude! Se tiver alguma dúvida, sinta-se à vontade para perguntar.

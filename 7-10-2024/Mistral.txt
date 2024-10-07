@@ -1,0 +1,51 @@
+Claro! Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, genero):
+        self.nome = nome
+        self.idade = idade
+        self.genero = genero
+
+    def __str__(self):
+        return f"Nome: {self.nome}, Idade: {self.idade}, Gênero: {self.genero}"
+
+    def fazer_aniversario(self):
+        self.idade += 1
+        print(f"{self.nome} fez aniversário e agora tem {self.idade} anos.")
+
+    def mudar_nome(self, novo_nome):
+        self.nome = novo_nome
+        print(f"O nome foi alterado para {self.nome}.")
+
+# Exemplo de uso
+pessoa1 = Pessoa("João", 30, "Masculino")
+print(pessoa1)
+pessoa1.fazer_aniversario()
+pessoa1.mudar_nome("João Silva")
+print(pessoa1)
+```
+
+### Explicação:
+
+1. **Construtor (`__init__`):**
+   - Inicializa os atributos `nome`, `idade` e `genero` da classe `Pessoa`.
+
+2. **Método `__str__`:**
+   - Retorna uma representação em string da instância da classe `Pessoa`.
+
+3. **Método `fazer_aniversario`:**
+   - Incrementa a idade da pessoa em 1 e imprime uma mensagem.
+
+4. **Método `mudar_nome`:**
+   - Altera o nome da pessoa e imprime uma mensagem.
+
+### Exemplo de uso:
+
+- Cria uma instância da classe `Pessoa` com o nome "João", idade 30 e gênero "Masculino".
+- Imprime os detalhes da pessoa.
+- Chama o método `fazer_aniversario` para incrementar a idade.
+- Chama o método `mudar_nome` para alterar o nome.
+- Imprime os detalhes atualizados da pessoa.
+
+Você pode expandir esta classe adicionando mais atributos e métodos conforme necessário.
