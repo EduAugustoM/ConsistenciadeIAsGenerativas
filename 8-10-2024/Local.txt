@@ -1,0 +1,83 @@
+Classe Pessoa em Python
+========================
+
+Aqui está uma implementação básica da classe Pessoa em Python, com atributos e métodos relacionados:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        """
+        Inicializa uma pessoa com um nome e idade.
+        
+        :param nome: O nome da pessoa.
+        :type nome: str
+        :param idade: A idade da pessoa.
+        :type idade: int
+        """
+        self.nome = nome
+        self.idade = idade
+
+    def get_nome(self):
+        """
+        Retorna o nome da pessoa.
+        
+        :return: O nome da pessoa.
+        :rtype: str
+        """
+        return self.nome
+
+    def get_idade(self):
+        """
+        Retorna a idade da pessoa.
+        
+        :return: A idade da pessoa.
+        :rtype: int
+        """
+        return self.idade
+
+    def set_nome(self, nome):
+        """
+        Atualiza o nome da pessoa.
+        
+        :param nome: O novo nome da pessoa.
+        :type nome: str
+        """
+        self.nome = nome
+
+    def set_idade(self, idade):
+        """
+        Atualiza a idade da pessoa.
+        
+        :param idade: A nova idade da pessoa.
+        :type idade: int
+        """
+        if idade < 0:
+            raise ValueError("Idade não pode ser negativa")
+        self.idade = idade
+
+    def __str__(self):
+        """
+        Retorna uma representação do objeto Pessoa em formato string.
+        
+        :return: Uma representação do objeto Pessoa em formato string.
+        :rtype: str
+        """
+        return f"Pessoa {self.nome}, Idade: {self.idade}"
+
+# Exemplo de uso:
+pessoa = Pessoa("João", 30)
+print(pessoa.get_nome())  # João
+print(pessoa.get_idade())  # 30
+
+pessoa.set_nome("Maria")
+pessoa.set_idade(25)
+
+print(pessoa)  # Pessoa Maria, Idade: 25
+```
+
+Explicação:
+- A classe `Pessoa` é definida com dois atributos: `nome` e `idade`, que são inicializados através do método de construção (`__init__`).
+- Os métodos `get_nome` e `get_idade` retornam os valores dos atributos `nome` e `idade`, respectivamente.
+- Os métodos `set_nome` e `set_idade` atualizam os valores dos atributos `nome` e `idade`, respeitando a lógica de validação da idade (não pode ser negativa).
+- O método `__str__` retorna uma representação do objeto em formato string, permitindo que ele seja impresso de forma coerente.
+- No exemplo de uso, é criada uma instância da classe `Pessoa` e seus atributos são acessados e alterados.
