@@ -1,0 +1,29 @@
+Claro! Aqui está um exemplo básico de como implementar a classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def saudacao(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+
+# Exemplo de uso
+pessoa1 = Pessoa("João", 30)
+print(pessoa1.saudacao())
+```
+
+Neste exemplo, a classe `Pessoa` possui dois atributos (`nome` e `idade`) e um método (`saudacao`) que retorna uma saudação personalizada com esses atributos⁶.
+
+Se precisar de mais alguma coisa ou tiver dúvidas, estou aqui para ajudar!
+
+Fonte: conversa com o Copilot, 09/10/2024
+(1) Python Class: Aprenda a programar com exemplos práticos - Awari. https://bing.com/search?q=implemente+a+classe+pessoa+em+python.
+(2) Python Classes e Métodos - Em Menos de 10 Minutos [FÁCIL]. https://www.youtube.com/watch?v=j6B8shHXzks.
+(3) Métodos de Classes - Python Orientado a Objetos - Aula 36. https://www.youtube.com/watch?v=ZTKeC1lae6I.
+(4) Como Funcionam Classes e Programação Orientada a Objetos em Python - Aprenda em 10 Minutos!. https://www.youtube.com/watch?v=97A_Cyyh-eU.
+(5) Como criar minha primeira classe em Python - DevMedia. https://www.devmedia.com.br/como-criar-minha-primeira-classe-em-python/38912.
+(6) Classes e Objetos no Python - Python Academy. https://pythonacademy.com.br/blog/classes-e-objetos-no-python.
+(7) Python Class: Aprenda a programar com exemplos práticos - Awari. https://awari.com.br/python-class-aprenda-a-programar-com-exemplos-praticos/.
+(8) Guia Completo sobre Classes em Python: Conceitos Fundamentais e .... https://www.covildodev.com.br/artigo/classes-python.

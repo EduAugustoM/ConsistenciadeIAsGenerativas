@@ -1,0 +1,28 @@
+Aqui está uma implementação simples da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, genero):
+    self.nome = nome
+    self.idade = idade
+    self.genero = genero
+
+  def cumprimentar(self):
+    return f"Olá, meu nome é {self.nome}."
+
+  def envelhecer(self, anos=1):
+    self.idade += anos
+
+  def mudar_nome(self, novo_nome):
+    self.nome = novo_nome
+```
+
+### Exemplo de uso:
+```python
+pessoa1 = Pessoa("Ana", 30, "Feminino")
+print(pessoa1.cumprimentar())  # Saída: Olá, meu nome é Ana.
+pessoa1.envelhecer(2)
+print(pessoa1.idade)  # Saída: 32
+pessoa1.mudar_nome("Mariana")
+print(pessoa1.cumprimentar())  # Saída: Olá, meu nome é Mariana.
+```

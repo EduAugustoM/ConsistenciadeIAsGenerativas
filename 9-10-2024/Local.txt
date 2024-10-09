@@ -1,0 +1,106 @@
+Classe Pessoa em Python
+========================
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    
+    Atributos:
+        - nome (str): Nome da pessoa.
+        - idade (int): Idade da pessoa.
+        - sexo (str): Sexo da pessoa ('masculino' ou 'feminino').
+    """
+
+    def __init__(self, nome, idade, sexo):
+        """
+        Inicializa uma pessoa com os seguintes atributos:
+            - nome: Nome da pessoa.
+            - idade: Idade da pessoa.
+            - sexo: Sexo da pessoa.
+
+        Args:
+            nome (str): Nome da pessoa.
+            idade (int): Idade da pessoa.
+            sexo (str): Sexo da pessoa ('masculino' ou 'feminino').
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def get_nome(self):
+        """
+        Retorna o nome da pessoa.
+
+        Returns:
+            str: Nome da pessoa.
+        """
+        return self.nome
+
+    def get_idade(self):
+        """
+        Retorna a idade da pessoa.
+
+        Returns:
+            int: Idade da pessoa.
+        """
+        return self.idade
+
+    def get_sexo(self):
+        """
+        Retorna o sexo da pessoa.
+
+        Returns:
+            str: Sexo da pessoa ('masculino' ou 'feminino').
+        """
+        return self.sexo
+
+    def __str__(self):
+        """
+        Retorna uma string representando a pessoa.
+
+        Returns:
+            str: String representando a pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Sexo: {self.sexo}"
+```
+
+Exemplos de Uso
+---------------
+
+```python
+# Criação de uma pessoa
+pessoa = Pessoa("João", 30, "masculino")
+
+# Acesso aos atributos
+print(pessoa.get_nome())  # Saída: Nome: João
+print(pessoa.get_idade())  # Saída: Idade: 30
+print(pessoa.get_sexo())   # Saída: Sexo: masculino
+
+# Imprimentação da classe Pessoa
+print(pessoa)  # Saída: Nome: João, Idade: 30, Sexo: masculino
+```
+
+Dica Adicional:
+---------------
+
+Para realizar operações mais complexas como calcular a idade do filho de uma pessoa de acordo com o ano atual, você pode adicionar métodos adicionais à classe Pessoa. Por exemplo:
+
+```python
+def get_filhos(self):
+    # Atributo: filhos (list) para armazenar os objetos Pessoa de uma família.
+    pass
+
+# Adicionando um método para calcular a idade do filho de acordo com o ano atual.
+from datetime import date
+
+class Pessoa:
+    # ...
+
+    @classmethod
+    def calculate_idade_filho(cls, pessoa, ano_atual):
+        data_nascimento = date(pessoa.idade, 1, 1)  # Data de nascimento da pessoa em formato Date
+        ano_nascimento = data_nascimento.year  # Ano de nascimento
+        idade = ano_atual - ano_nascimento
+
+        return idade
+```
