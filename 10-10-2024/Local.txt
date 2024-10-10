@@ -1,0 +1,67 @@
+Classe Pessoa em Python
+=========================
+
+Nesta seção, vamos implementar uma classe Pessoa em Python. A classe Pessoa é uma das mais básicas e fundamentais na programação orientada a objetos.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        """
+        Inicializador da classe Pessoa.
+
+        :param nome: Nome do pessoa.
+        :param idade: Idade do pessoa.
+        """
+        self._nome = nome
+        self._idade = idade
+
+    @property
+    def nome(self):
+        """Nome do pessoa."""
+        return self._nome
+
+    @nome.setter
+    def nome(self, valor):
+        if not isinstance(valor, str) or len(valor.strip()) == 0:
+            raise ValueError("Nome não pode ser vazio ou nulo.")
+        self._nome = valor
+
+    @property
+    def idade(self):
+        """Idade do pessoa."""
+        return self._idade
+
+    @idade.setter
+    def idade(self, valor):
+        if not isinstance(valor, int) or valor < 0:
+            raise ValueError("Idade não pode ser negativa ou não inteira.")
+        self._idade = valor
+
+    def get_info(self):
+        """Retorna informações básicas do pessoa."""
+        return f"Nome: {self.nome}, Idade: {self.idade} anos"
+
+# Exemplo de uso:
+pessoa = Pessoa("João", 30)
+print(pessoa.get_info())
+
+try:
+    pessoa.nome = "Joao"
+except ValueError as e:
+    print(f"{e}")
+
+try:
+    pessoa.idade = -1
+except ValueError as e:
+    print(f"{e}")
+```
+
+Nesta classe, temos os seguintes atributos:
+
+- `nome`: Nome do pessoa.
+- `idade`: Idade do pessoa.
+
+Também definimos métodos:
+
+- `__init__`: Inicializador da classe.
+- `nome`, `idade` e `get_info`: Propriedades para acessar e mudar o nome e idade do pessoa, respectivamente.

@@ -1,0 +1,27 @@
+Aqui está um exemplo simples da classe `Pessoa` em Python, com alguns atributos e métodos básicos:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, sexo):
+    self.nome = nome
+    self.idade = idade
+    self.sexo = sexo
+
+  def cumprimentar(self):
+    return f"Olá, meu nome é {self.nome}!"
+
+  def mostrar_idade(self):
+    return f"Tenho {self.idade} anos."
+
+  def aniversario(self):
+    self.idade += 1
+    return f"Feliz aniversário! Agora você tem {self.idade} anos."
+
+# Exemplo de uso
+pessoa1 = Pessoa("João", 30, "Masculino")
+print(pessoa1.cumprimentar())
+print(pessoa1.mostrar_idade())
+print(pessoa1.aniversario())
+```
+
+Este código define uma classe `Pessoa` com atributos `nome`, `idade` e `sexo`, e três métodos: um para cumprimentar, um para mostrar a idade e outro que simula um aniversário aumentando a idade da pessoa.

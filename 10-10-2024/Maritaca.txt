@@ -1,0 +1,24 @@
+Claro, aqui está um exemplo simples de como você poderia implementar uma classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+
+    def comemorar_aniversario(self):
+        self.idade += 1
+        return f"Uhu! Agora eu tenho {self.idade} anos."
+
+# Exemplo de uso:
+pessoa = Pessoa("João", 30)
+print(pessoa.apresentar())
+print(pessoa.comemorar_aniversario())
+```
+
+Neste exemplo, a classe `Pessoa` tem dois métodos: `apresentar`, que retorna uma string com o nome e a idade da pessoa, e `comemorar_aniversario`, que incrementa a idade da pessoa em um ano e retorna uma string com a nova idade.
+
+Você pode adicionar mais atributos e métodos conforme as necessidades do seu programa.
