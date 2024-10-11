@@ -1,0 +1,102 @@
+Classe Pessoa em Python
+======================
+
+Aqui está uma implementação básica de uma classe `Pessoa` em Python, incluindo atributos e métodos para manipulação de dados.
+
+```python
+class Pessoa:
+    """
+    Classe que representa uma pessoa.
+    """
+
+    def __init__(self, nome, idade):
+        """
+        Inicializa um objeto Pessoa com o nome e idade fornecidos.
+
+        :param nome: Nome da pessoa.
+        :type nome: str
+        :param idade: Idade da pessoa.
+        :type idade: int
+        """
+        self.nome = nome
+        self.idade = idade
+
+    def get_nome(self):
+        """
+        Devolve o nome da pessoa.
+
+        :return: Nome da pessoa.
+        :rtype: str
+        """
+        return self.nome
+
+    def set_nome(self, nome):
+        """
+        Define o nome da pessoa.
+
+        :param nome: Novo nome da pessoa.
+        :type nome: str
+        """
+        self.nome = nome
+
+    def get_idade(self):
+        """
+        Devolve a idade da pessoa.
+
+        :return: Idade da pessoa.
+        :rtype: int
+        """
+        return self.idade
+
+    def set_idade(self, idade):
+        """
+        Defina a idade da pessoa.
+
+        :param idade: Nova idade da pessoa.
+        :type idade: int
+        """
+        self.idade = idade
+
+    def __str__(self):
+        """
+        Devolve uma string representando o objeto Pessoa.
+
+        :return: String representativa do objeto Pessoa.
+        :rtype: str
+        """
+        return f"Pessoa - Nome: {self.nome}, Idade: {self.idade}"
+```
+
+Exemplos de uso
+---------------
+
+```python
+# Crie um objeto Pessoa com nome "João" e idade 25
+pessoa = Pessoa("João", 25)
+
+# Imprima o nome e a idade da pessoa
+print(pessoa.get_nome())  # Saída: João
+print(pessoa.get_idade())  # Saída: 25
+
+# Defina um novo nome para a pessoa
+pessoa.set_nome("Pedro")
+
+# Imprima o nome e a idade atualizada da pessoa
+print(pessoa.get_nome())  # Saída: Pedro
+print(pessoa.get_idade())  # Saída: 25
+
+# Crie outro objeto Pessoa com nome "Maria" e idade 30
+pessoa2 = Pessoa("Maria", 30)
+
+# Imprima o nome e a idade da pessoa2
+print(pessoa2.get_nome())  # Saída: Maria
+print(pessoa2.get_idade())  # Saída: 30
+```
+
+Observações
+------------
+
+*   A classe `Pessoa` é um exemplo básico de como criar uma classe em Python com atributos e métodos.
+*   O método `__init__` é o método de inicialização, onde são atribuídos os valores iniciais dos atributos da classe.
+*   Os métodos `get_nome`, `set_nome`, `get_idade` e `set_idade` são exemplos de como criar metodos getter e setter para manipular os atributos da classe.
+*   A classe também possui um método `__str__` que returna uma string representativa do objeto, que pode ser útil em situações onde é necessário imprimir ou exibir informações sobre o objeto.

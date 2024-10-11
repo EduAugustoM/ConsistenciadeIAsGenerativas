@@ -1,0 +1,47 @@
+
+
+Certainly! Here's a simple implementation of a "Pessoa" (Person) class in Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, altura):
+        self.nome = nome
+        self.idade = idade
+        self.altura = altura
+
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome}, tenho {self.idade} anos e {self.altura}m de altura."
+
+    def aniversario(self):
+        self.idade += 1
+        return f"Feliz aniversário! Agora tenho {self.idade} anos."
+
+# Exemplo de uso:
+# pessoa = Pessoa("João", 30, 1.75)
+# print(pessoa.apresentar())
+# print(pessoa.aniversario())
+```
+
+This class has the following features:
+
+1. It has three attributes: `nome` (name), `idade` (age), and `altura` (height).
+2. The `__init__` method initializes these attributes when a new `Pessoa` object is created.
+3. The `apresentar` method returns a string introducing the person with their name, age, and height.
+4. The `aniversario` method increments the age by 1 and returns a birthday message.
+
+You can create and use a `Pessoa` object like this:
+
+```python
+# Criar uma nova pessoa
+joao = Pessoa("João", 30, 1.75)
+
+# Apresentar a pessoa
+print(joao.apresentar())
+
+# Celebrar o aniversário
+print(joao.aniversario())
+```
+
+This implementation provides a basic structure for a Person class. You can expand on this by adding more attributes or methods as needed for your specific use case.
+
+Would you like me to explain any part of this code or add any additional features to the class?
