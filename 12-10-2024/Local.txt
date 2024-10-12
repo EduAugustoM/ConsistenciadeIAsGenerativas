@@ -1,0 +1,51 @@
+# Implementação da Classe Pessoa em Python
+=====================================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python. Esta classe inclui atributos como nome, idade e endereço.
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    def __init__(self, nome, idade, endereco):
+        """
+        Inicializador da classe Pessoa.
+
+        Args:
+            nome (str): O nome da pessoa.
+            idade (int): A idade da pessoa.
+            endereco (dict): O endereço da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def __str__(self):
+        """
+        Representação da classe Pessoa como uma string.
+
+        Returns:
+            str: Uma string que representa a pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade} anos, Endereço: {self.endereco}"
+
+# Exemplo de uso
+if __name__ == "__main__":
+    pessoa1 = Pessoa("João", 30, {"rua": "Rua A", "numero": 123})
+    pessoa2 = Pessoa("Maria", 25, {"rua": "Rua B", "numero": 456})
+
+    print(pessoa1)
+    print(pessoa2)
+```
+
+Neste exemplo, a classe `Pessoa` é implementada com os seguintes atributos:
+
+*   `nome`: O nome da pessoa.
+*   `idade`: A idade da pessoa.
+*   `endereco`: Um dicionário que representa o endereço da pessoa.
+
+A classe também inclui um método de inicialização (`__init__`) que estabelece os valores dos atributos na instância do objeto. Além disso, há um método de representação (`__str__`) que retorna uma string que descreve a pessoa.
+
+O exemplo de uso no final da implementação demonstra como criar instâncias da classe `Pessoa` e acessar seus atributos e métodos.
