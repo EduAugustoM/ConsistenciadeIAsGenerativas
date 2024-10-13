@@ -1,0 +1,72 @@
+**Classe Pessoa em Python**
+=====================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, sexo):
+        """
+        Inicializa um objeto Pessoa.
+
+        :param nome: O nome do indivíduo.
+        :param idade: A idade do indivíduo.
+        :param sexo: O sexo do indivíduo (masculino ou feminino).
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def __str__(self):
+        """
+        Retorna uma string representando o objeto Pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Sexo: {self.sexo}"
+
+    def get_idade(self):
+        """
+        Retornar a idade do indivíduo.
+
+        :return: A idade do indivíduo.
+        """
+        return self.idade
+
+    def get_sexo(self):
+        """
+        Retornar o sexo do indivíduo.
+
+        :return: O sexo do indivíduo.
+        """
+        return self.sexo
+```
+
+**Exemplo de Uso**
+--------------------
+
+```python
+# Cria um objeto Pessoa
+pessoa1 = Pessoa("João", 30, "masculino")
+
+# Imprime a string representando o objeto Pessoa
+print(pessoa1)
+
+# Retorna a idade do indivíduo
+idade = pessoa1.get_idade()
+print(f"A idade de {pessoa1.nome} é {idade}")
+
+# Retornar o sexo do indivíduo
+sexo = pessoa1.get_sexo()
+print(f"O sexo de {pessoa1.nome} é {sexo}")
+```
+
+**Outras Funções**
+--------------------
+
+Você pode adicionar outras funções à classe `Pessoa` para realizar operações adicionais, como:
+
+*   `get_endereço`: Retornar o endereço do indivíduo.
+*   `set_endereco`: Setar o endereço do indivíduo.
+*   `get_contato`: Retornar o contato do indivíduo (telefone, e-mail, etc.).
+*   `set_contato`: Setar o contato do indivíduo.
+
+Lembre-se de seguir as melhores práticas de design para a sua classe `Pessoa`.

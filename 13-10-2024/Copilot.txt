@@ -1,0 +1,17 @@
+Claro! Aqui está um exemplo simples de uma classe Pessoa em Python:
+
+python
+
+Copiar
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def saudacao(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+
+# Exemplo de uso
+pessoa1 = Pessoa("Maria", 25)
+print(pessoa1.saudacao())
+Neste exemplo, a classe Pessoa possui dois atributos, nome e idade, e um método saudacao que retorna uma saudação personalizada. Fácil, certo? 😄
