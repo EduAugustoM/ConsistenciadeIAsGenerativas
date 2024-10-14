@@ -1,0 +1,70 @@
+**Classe Pessoa em Python**
+=====================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, sobrenome, idade):
+        """
+        Construtor da classe Pessoa.
+
+        :param nome: Nome completo do indivíduo.
+        :param sobrenome: Sobrenome do indivíduo.
+        :param idade: Idade do indivíduo em anos.
+        """
+        self._nome = nome
+        self._sobrenome = sobrenome
+        self._idade = idade
+
+    @property
+    def nome(self):
+        """Retorna o nome completo do indivíduo."""
+        return f"{self._nome} {self._sobrenome}"
+
+    @property
+    def sobrenome(self):
+        """Retorna o sobrenome do indivíduo."""
+        return self._sobrenome
+
+    @property
+    def idade(self):
+        """Retorna a idade do indivíduo."""
+        return self._idade
+
+    def get_info(self):
+        """
+        Retorna informações básicas sobre o indivíduo.
+
+        :return: Uma string contendo informações básicas.
+        """
+        return f"Nome: {self.nome}\nIdade: {self.idade} anos"
+
+    def __str__(self):
+        """Retorna uma representação string da pessoa."""
+        return f"Pessoa({self.nome}, {self.idade} anos)"
+
+# Exemplo de uso:
+pessoa = Pessoa("João", "Silva", 30)
+print(pessoa.get_info())
+print(pessoa)
+
+```
+
+**Explicação**
+---------------
+
+A classe `Pessoa` tem os seguintes atributos:
+
+*   `_nome`: Nome completo do indivíduo.
+*   `_sobrenome`: Sobrenome do indivíduo.
+*   `_idade`: Idade do indivíduo em anos.
+
+Os métodos da classe são:
+
+*   `__init__`: Construtor que inicializa os atributos com base nos parâmetros passados.
+*   `nome`, `sobrenome` e `idade`: Propriedades que retornam os valores dos respectivos atributos.
+*   `get_info`: Método que retorna uma string contendo informações básicas sobre o indivíduo.
+*   `__str__`: Método que retorna uma representação string da pessoa.
+
+O exemplo de uso demonstra como criar um objeto da classe `Pessoa` e acessar seus atributos e métodos.

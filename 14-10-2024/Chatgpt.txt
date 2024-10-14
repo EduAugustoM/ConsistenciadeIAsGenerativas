@@ -1,0 +1,29 @@
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, cpf):
+    self.nome = nome
+    self.idade = idade
+    self.cpf = cpf
+
+  def exibir_dados(self):
+    print(f'Nome: {self.nome}, Idade: {self.idade}, CPF: {self.cpf}')
+
+  def fazer_aniversario(self):
+    self.idade += 1
+    print(f'Feliz aniversário, {self.nome}! Agora você tem {self.idade} anos.')
+```
+
+Essa classe `Pessoa` possui:
+- Atributos: `nome`, `idade` e `cpf`.
+- Método `exibir_dados`: para exibir as informações da pessoa.
+- Método `fazer_aniversario`: que aumenta a idade da pessoa em 1 e exibe uma mensagem de aniversário.
+
+Exemplo de uso:
+
+```python
+pessoa1 = Pessoa("João", 25, "123.456.789-00")
+pessoa1.exibir_dados()
+pessoa1.fazer_aniversario()
+```

@@ -1,0 +1,17 @@
+Você pediu e eu entrego! Aqui está um exemplo fresquinho para você:
+
+python
+
+Copiar
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def saudacao(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+
+# Exemplo de uso
+pessoa1 = Pessoa("Carlos", 40)
+print(pessoa1.saudacao())
+Neste exemplo, Pessoa tem os atributos nome e idade, e um método saudacao que retorna uma mensagem personalizada. Code, create, conquer. 🚀
