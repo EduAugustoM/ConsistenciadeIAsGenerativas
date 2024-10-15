@@ -1,0 +1,52 @@
+Claro! Vou implementar uma classe `Pessoa` em Python com alguns atributos e métodos básicos. Vamos incluir atributos como `nome`, `idade` e `endereco`, e métodos para definir e obter esses atributos.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def get_nome(self):
+        return self.nome
+
+    def set_nome(self, nome):
+        self.nome = nome
+
+    def get_idade(self):
+        return self.idade
+
+    def set_idade(self, idade):
+        self.idade = idade
+
+    def get_endereco(self):
+        return self.endereco
+
+    def set_endereco(self, endereco):
+        self.endereco = endereco
+
+    def __str__(self):
+        return f"Nome: {self.nome}, Idade: {self.idade}, Endereço: {self.endereco}"
+
+# Exemplo de uso
+pessoa = Pessoa("João", 30, "Rua A, 123")
+print(pessoa)
+
+pessoa.set_nome("Maria")
+pessoa.set_idade(25)
+pessoa.set_endereco("Rua B, 456")
+
+print(pessoa.get_nome())
+print(pessoa.get_idade())
+print(pessoa.get_endereco())
+
+print(pessoa)
+```
+
+Neste exemplo, a classe `Pessoa` possui:
+
+- Um construtor (`__init__`) que inicializa os atributos `nome`, `idade` e `endereco`.
+- Métodos getters e setters para cada atributo.
+- Um método `__str__` para fornecer uma representação em string da instância da classe.
+
+Você pode criar uma instância da classe `Pessoa` e usar os métodos para definir e obter os valores dos atributos.

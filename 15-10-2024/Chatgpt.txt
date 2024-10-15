@@ -1,0 +1,18 @@
+Aqui está a implementação básica de uma classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, cpf):
+    self.nome = nome
+    self.idade = idade
+    self.cpf = cpf
+
+  def cumprimentar(self):
+    return f"Olá, meu nome é {self.nome}."
+
+  def aniversario(self):
+    self.idade += 1
+    return f"Parabéns, {self.nome}! Agora você tem {self.idade} anos."
+```
+
+Essa classe possui três atributos: `nome`, `idade` e `cpf`, além de dois métodos: `cumprimentar` e `aniversario`. O método `cumprimentar` retorna uma saudação com o nome da pessoa, enquanto o método `aniversario` incrementa a idade da pessoa em 1 ano e retorna uma mensagem de parabéns.

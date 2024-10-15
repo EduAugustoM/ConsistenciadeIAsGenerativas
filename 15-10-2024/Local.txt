@@ -1,0 +1,76 @@
+Classe Pessoa em Python
+=====================
+
+Aqui está uma implementação básica da classe Pessoa em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, sexo):
+        """
+        Inicializa um objeto Pessoa.
+
+        Args:
+            nome (str): O nome do pessoa.
+            idade (int): A idade do pessoa.
+            sexo (str): O sexo do pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def __str__(self):
+        """
+        Retorna uma string que representa o objeto Pessoa.
+
+        Returns:
+            str: Uma string que inclui o nome, idade e sexo do pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Sexo: {self.sexo}"
+
+    def get_idade(self):
+        """
+        Retorna a idade do pessoa.
+
+        Returns:
+            int: A idade do pessoa.
+        """
+        return self.idade
+
+    def set_idade(self, idade):
+        """
+        Atualiza a idade do pessoa.
+
+        Args:
+            idade (int): A nova idade do pessoa.
+        """
+        if not isinstance(idade, int) or idade < 0:
+            raise ValueError("Idade inválida")
+        self.idade = idade
+```
+
+Exemplo de uso
+-------------
+
+```python
+# Cria um objeto Pessoa
+pessoa1 = Pessoa("João", 30, "Masculino")
+
+# Imprime o nome, idade e sexo do pessoa
+print(pessoa1)
+
+# Obtém a idade do pessoa
+idade = pessoa1.get_idade()
+print(f"A idade de {pessoa1.nome} é: {idade}")
+
+# Atualiza a idade do pessoa
+pessoa1.set_idade(31)
+print(f"A idade atualizada de {pessoa1.nome} é: {pessoa1.idade}")
+```
+
+Esse código define uma classe Pessoa com os seguintes atributos:
+
+*   Nome (string)
+*   Idade (int)
+*   Sexo (string)
+
+Ele também define métodos para obter e setar a idade do objeto.
