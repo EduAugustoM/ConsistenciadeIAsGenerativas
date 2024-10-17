@@ -1,0 +1,108 @@
+**Classe Pessoa em Python**
+=====================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python, com atributos e métodos relevantes para uma pessoa:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereço):
+        """
+        Inicializa um objeto Pessoa.
+
+        :param nome: Nome da pessoa.
+        :type nome: str
+        :param idade: Idade da pessoa em anos.
+        :type idade: int
+        :param endereço: Endereço da pessoa (rua, número, cidade, estado, código postal).
+        :type endereço: dict
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereço = endereço
+
+    def get_nome(self):
+        """
+        Retorna o nome da pessoa.
+
+        :return: Nome da pessoa.
+        :rtype: str
+        """
+        return self.nome
+
+    def get_idade(self):
+        """
+        Retorna a idade da pessoa.
+
+        :return: Idade da pessoa em anos.
+        :rtype: int
+        """
+        return self.idade
+
+    def get_endereço(self):
+        """
+        Retorna o endereço da pessoa.
+
+        :return: Endereço da pessoa (rua, número, cidade, estado, código postal).
+        :rtype: dict
+        """
+        return self.endereço
+
+    def set_nome(self, nome):
+        """
+        Atualiza o nome da pessoa.
+
+        :param nome: Novo nome da pessoa.
+        :type nome: str
+        """
+        if not isinstance(nome, str) or len(nome.strip()) == 0:
+            raise ValueError("Nome inválido")
+        self.nome = nome
+
+    def set_idade(self, idade):
+        """
+        Atualiza a idade da pessoa.
+
+        :param idade: Nova idade da pessoa em anos.
+        :type idade: int
+        """
+        if not isinstance(idade, int) or idade < 0:
+            raise ValueError("Idade inválida")
+        self.idade = idade
+
+    def set_endereço(self, endereço):
+        """
+        Atualiza o endereço da pessoa.
+
+        :param endereço: Novo endereço da pessoa (rua, número, cidade, estado, código postal).
+        :type endereço: dict
+        """
+        if not isinstance(endereço, dict) or len(endereço.strip()) == 0:
+            raise ValueError("Endereço inválido")
+        self.endereço = endereço
+
+# Exemplo de uso:
+
+pessoa = Pessoa("João", 30, {"rua": "Rua A", "número": 10, "cidade": "São Paulo", "estado": "SP", "código postal": 12345})
+print(pessoa.get_nome())  # Imprime: João
+print(pessoa.get_idade())   # Imprime: 30
+print(pessoa.get_endereço())  # Imprime: {'rua': 'Rua A', 'número': 10, 'cidade': 'São Paulo', 'estado': 'SP', 'código postal': 12345}
+
+pessoa.set_nome("Maria")
+pessoa.set_idade(25)
+print(pessoa.get_nome())     # Imprime: Maria
+print(pessoa.get_idade())     # Imprime: 25
+```
+
+Essa classe `Pessoa` tem os seguintes atributos:
+
+*   `nome`: Nome da pessoa.
+*   `idade`: Idade da pessoa em anos.
+*   `endereço`: Endereço da pessoa, representado por um dicionário com as informações (rua, número, cidade, estado, código postal).
+
+Os métodos estão dispostos da seguinte forma:
+
+*   `__init__`: Inicializa o objeto Pessoa.
+*   `get_nome`, `get_idade` e `get_endereço`: Retornam os valores dos atributos correspondentes.
+*   `set_nome`, `set_idade` e `set_endereço`: Atualizam os valores dos atributos correspondentes.
+
+A classe também contém validações para garantir que as informações inseridas sejam corretas.

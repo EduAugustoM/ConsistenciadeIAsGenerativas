@@ -1,0 +1,38 @@
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, altura):
+    self.nome = nome
+    self.idade = idade
+    self.altura = altura
+
+  def apresentar(self):
+    return f"Olá, meu nome é {self.nome}, tenho {self.idade} anos e {self.altura} metros de altura."
+
+  def envelhecer(self):
+    self.idade += 1
+
+  def crescer(self, cm):
+    self.altura += cm / 100  # Convertendo centímetros para metros
+```
+
+### Exemplos de uso:
+
+```python
+# Criando um objeto da classe Pessoa
+pessoa1 = Pessoa("João", 30, 1.75)
+
+# Apresentando a pessoa
+print(pessoa1.apresentar())
+
+# Envelhecendo a pessoa
+pessoa1.envelhecer()
+print(pessoa1.apresentar())
+
+# Crescendo a pessoa
+pessoa1.crescer(5)
+print(pessoa1.apresentar())
+```
+
+Esta classe permite criar objetos com nome, idade e altura, além de fornecer métodos para a pessoa se apresentar, envelhecer e crescer.
