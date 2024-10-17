@@ -1,0 +1,85 @@
+# Implementação da Classe Pessoa em Python
+
+Aqui está uma implementação básica da classe `Pessoa` em Python, incluindo atributos e métodos para manipular informações de      
+contato e detalhes pessoais.
+
+```python
+class Pessoa:
+    def __init__(self, nome, sobrenome, idade, telefone, email):
+        """
+        Inicializa a classe Pessoa com os seguintes atributos:
+
+        *   nome (str): Nome completo da pessoa.
+        *   sobrenome (str): Sobrenome da pessoa.
+        *   idade (int): Idade da pessoa em anos.
+        *   telefone (str): Número de telefone da pessoa.
+        *   email (str): Endereço de e-mail da pessoa.
+
+        :param nome: Nome completo da pessoa.
+        :param sobrenome: Sobrenome da pessoa.
+        :param idade: Idade da pessoa em anos.
+        :param telefone: Número de telefone da pessoa.
+        :param email: Endereço de e-mail da pessoa.
+        """
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.idade = idade
+        self.telefone = telefone
+        self.email = email
+
+    def get_info(self):
+        """
+        Retornar informações básicas sobre a pessoa.
+
+        :return: Dicionário com informações básicas.
+        """
+        return {
+            "Nome": f"{self.nome} {self.sobrenome}",
+            "Idade": self.idade,
+            "Telefone": self.telefone,
+            "Email": self.email
+        }
+
+    def atualizar_telefone(self, novo_telefone):
+        """
+        Atualizar o número de telefone da pessoa.
+
+        :param novo_telefone: Novo número de telefone.
+        """
+        self.telefone = novo_telefone
+
+    def atualizar_email(self, novo_email):
+        """
+        Atualizar o endereço de e-mail da pessoa.
+
+        :param novo_email: Novo endereço de e-mail.
+        """
+        self.email = novo_email
+
+
+# Exemplo de uso
+if __name__ == "__main__":
+    # Criação de uma instância da classe Pessoa
+    pessoa = Pessoa("João", "Silva", 30, "11999999999", "jsilva@example.com")
+
+    print(pessoa.get_info())
+
+    # Atualização do telefone e email
+    pessoa.atualizar_telefone("11999999998")
+    pessoa.atualizar_email("jmsilva1@gmail.com")
+
+    print(pessoa.get_info())
+```
+
+Neste exemplo, a classe `Pessoa` é implementada com os seguintes atributos:
+
+*   `nome`: Nome completo da pessoa.
+*   `sobrenome`: Sobrenome da pessoa.
+*   `idade`: Idade da pessoa em anos.
+*   `telefone`: Número de telefone da pessoa.
+*   `email`: Endereço de e-mail da pessoa.
+
+Além disso, são implementados métodos para:
+
+*   Obter informações básicas sobre a pessoa (`get_info`).
+*   Atualizar o número de telefone (`atualizar_telefone`) e endereço de e-mail (`atualizar_email`).
