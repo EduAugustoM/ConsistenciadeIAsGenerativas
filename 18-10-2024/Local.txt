@@ -1,0 +1,50 @@
+**Implementação da Classe Pessoa em Python**
+=============================================
+
+Nesta implementação, vamos criar uma classe `Pessoa` que possua atributos básicos para representar uma pessoa. A classe será composta por um nome, idade e endereço.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        """
+        Inicializa a classe Pessoa com os seguintes parâmetros:
+
+        :param nome: Nome da pessoa.
+        :param idade: Idade da pessoa.
+        :param endereco: Endereço da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def __str__(self):
+        """
+        Retorna uma representação string da classe Pessoa.
+        """
+        return f"Nome: {self.nome}\nIdade: {self.idade} anos\nEndereço: {self.endereco}"
+
+    def incrementar_idade(self, dias):
+        """
+        Incrementa a idade do objeto em um número de dias.
+
+        :param dias: Número de dias a adicionar à idade.
+        """
+        self.idade += dias
+
+# Exemplo de uso da classe
+pessoa = Pessoa("João", 30, "Rua das Acácias, 123")
+print(pessoa)
+pessoa.incrementar_idade(365 * 10) # Adiciona 10 anos a pessoa
+print(pessoa)
+```
+
+Nesta implementação:
+
+*   A classe `Pessoa` tem um método de inicialização (`__init__`) que recebe os parâmetros `nome`, `idade` e `endereco`.
+*   O método `__str__` retorna uma representação string da classe `Pessoa`, incluindo o nome, idade e endereço.
+*   O método `incrementar_idade` incrementa a idade do objeto em um número de dias.
+*   No exemplo de uso, criamos um objeto `pessoa` com os parâmetros `nome`, `idade` e `endereco`.
+*   Imprimimos o objeto para visualizar seus atributos iniciais.
+*   Incrementamos a idade da pessoa por 10 anos usando o método `incrementar_idade`.
+
+Essa implementação fornece uma estrutura básica para representar pessoas em Python. Você pode adicionar mais métodos ou atributos à classe de acordo com as necessidades específicas do seu projeto.

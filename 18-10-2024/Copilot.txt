@@ -1,0 +1,17 @@
+Here’s a simple implementation of a Pessoa class in Python for you:
+
+python
+
+Copiar
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def __str__(self):
+        return f"Nome: {self.nome}, Idade: {self.idade}"
+
+# Exemplo de uso
+pessoa = Pessoa("João", 30)
+print(pessoa)
+Is that along the lines of what you were thinking?

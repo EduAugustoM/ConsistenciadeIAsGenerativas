@@ -1,0 +1,20 @@
+Certamente! Abaixo está um exemplo de como você pode implementar uma classe `Pessoa` simples em Python. Esta classe terá alguns atributos básicos como `nome`, `idade` e `email`, e um método para exibir as informações da pessoa.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, email):
+        self.nome = nome
+        self.idade = idade
+        self.email = email
+
+    def exibir_informacoes(self):
+        print(f"Nome: {self.nome}")
+        print(f"Idade: {self.idade}")
+        print(f"Email: {self.email}")
+
+# Exemplo de uso da classe Pessoa
+pessoa1 = Pessoa("João Silva", 30, "joaosilva@example.com")
+pessoa1.exibir_informacoes()
+```
+
+Este é um exemplo básico e você pode expandir a classe `Pessoa` com mais atributos e métodos conforme suas necessidades. Por exemplo, você pode adicionar métodos para atualizar informações, validar o email, calcular o ano de nascimento com base na idade, entre outros.

@@ -1,0 +1,28 @@
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, altura):
+    self.nome = nome
+    self.idade = idade
+    self.altura = altura
+
+  def cumprimentar(self):
+    return f"Olá, meu nome é {self.nome}."
+
+  def envelhecer(self):
+    self.idade += 1
+
+  def crescer(self, cm):
+    self.altura += cm
+
+# Exemplo de uso
+p1 = Pessoa("Carlos", 30, 1.75)
+print(p1.cumprimentar())  # Olá, meu nome é Carlos.
+p1.envelhecer()
+p1.crescer(0.05)
+print(p1.idade)  # 31
+print(p1.altura)  # 1.80
+```
+
+Essa classe `Pessoa` contém três atributos: `nome`, `idade` e `altura`. Há também três métodos: `cumprimentar`, `envelhecer` (para aumentar a idade em 1) e `crescer` (para aumentar a altura em um valor passado como argumento).
