@@ -1,0 +1,18 @@
+Aqui está uma implementação simples da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, genero):
+    self.nome = nome
+    self.idade = idade
+    self.genero = genero
+
+  def cumprimentar(self):
+    return f"Olá, meu nome é {self.nome}."
+
+  def envelhecer(self, anos):
+    self.idade += anos
+    return f"{self.nome} agora tem {self.idade} anos."
+```
+
+Essa classe tem três atributos: `nome`, `idade` e `genero`. Ela também possui dois métodos: um para retornar uma saudação e outro para simular o envelhecimento, atualizando a idade da pessoa.

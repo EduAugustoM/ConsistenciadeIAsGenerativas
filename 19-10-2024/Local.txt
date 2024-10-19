@@ -1,0 +1,53 @@
+**Implementação da Classe Pessoa em Python**
+=====================================================
+
+Neste exemplo, vamos criar uma classe `Pessoa` que representa um indivíduo com informações como nome, idade e endereço.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        """
+        Inicializa a pessoa com os parâmetros fornecidos.
+
+        :param nome: Nome do indivíduo.
+        :param idade: Idade do indivíduo.
+        :param endereco: Endereço do indivíduo.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def __str__(self):
+        """
+        Retorna uma string representando a pessoa.
+
+        :return: String que contém informações da pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade} anos, Endereço: {self.endereco}"
+
+    def aumentar_idade(self, dias):
+        """
+        Aumenta a idade do indivíduo por um determinado número de dias.
+
+        :param dias: Número de dias para aumentar a idade.
+        """
+        self.idade += dias
+
+# Exemplo de uso:
+pessoa = Pessoa("João", 25, "Rua 123")
+print(pessoa)  # Saída: Nome: João, Idade: 25 anos, Endereço: Rua 123
+pessoa.aumentar_idade(365)
+print(pessoa)  # Saída: Nome: João, Idade: 30 anos, Endereço: Rua 123
+```
+
+**Explanations**
+
+*   A classe `Pessoa` é definida com o método de construção (`__init__`) que recebe os parâmetros `nome`, `idade` e `endereco`.
+*   O método `__str__` é utilizado para fornecer uma representação da pessoa em formato string.
+*   O método `aumentar_idade` é usado para aumentar a idade do indivíduo por um determinado número de dias.
+
+**Dicas**
+
+*   Utilize docstrings para documentar a classe e seus métodos, tornando mais fácil de entender o comportamento da classe.
+*   Implemente métodos que fornecem uma representação clara e compreensível das informações do objeto.
+*   Use um estilo consistente de indentação e espaçamento para melhorar a leitura e manutenção do código.

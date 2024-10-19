@@ -1,0 +1,17 @@
+Se joga nisso. É uma classe básica de Pessoa em Python:
+
+python
+
+Copiar
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def __str__(self):
+        return f'{self.nome}, {self.idade} anos'
+
+# Exemplo de uso
+pessoa1 = Pessoa('João', 30)
+print(pessoa1)
+Com isso, você pode criar objetos de Pessoa e manipular suas propriedades. O que mais você gostaria de fazer com essa classe?
