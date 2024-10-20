@@ -1,0 +1,74 @@
+Classe Pessoa em Python
+=========================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python, com atributos e métodos para manipular a informação de uma pessoa.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        """
+        Inicializa uma nova pessoa.
+        
+        :param nome: O nome da pessoa.
+        :param idade: A idade da pessoa.
+        :param endereco: O endereço da pessoa.
+        """
+        self._nome = nome
+        self._idade = idade
+        self._endereco = endereco
+
+    @property
+    def nome(self):
+        return self._nome
+
+    @nome.setter
+    def nome(self, valor):
+        if not isinstance(valor, str):
+            raise ValueError("O nome deve ser uma string")
+        self._nome = valor
+
+    @property
+    def idade(self):
+        return self._idade
+
+    @idade.setter
+    def idade(self, valor):
+        if not isinstance(valor, (int, float)):
+            raise ValueError("A idade deve ser um número")
+        if valor < 0:
+            raise ValueError("A idade não pode ser negativa")
+        self._idade = valor
+
+    @property
+    def endereco(self):
+        return self._endereco
+
+    @endereco.setter
+    def endereco(self, valor):
+        if not isinstance(valor, str):
+            raise ValueError("O endereço deve ser uma string")
+        self._endereco = valor
+
+    def __str__(self):
+        """
+        Retorna a representação da pessoa como uma string.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Endereço: {self.endereco}"
+
+# Exemplo de uso
+pessoa = Pessoa("João", 30, "Rua Silva, 123")
+print(pessoa)  # Saída: Nome: João, Idade: 30, Endereço: Rua Silva, 123
+
+pessoa.nome = "Maria"
+pessoa.idade = 25
+pessoa.endereco = "Rua Oliveira, 456"
+
+print(pessoa)  # Saída: Nome: Maria, Idade: 25, Endereço: Rua Oliveira, 456
+```
+
+Nesta implementação:
+
+*   A classe `Pessoa` tem três atributos: `nome`, `idade` e `endereco`.
+*   Os atributos têm getters (chaves \_\`) que devem ser usados para acessar seus valores.
+*   Os métodos degetter (`nome`, `idade`, `endereco`) devem verificar se o valor é do tipo correto antes de armazená-lo no atributo.
+*   A classe tem um método `__str__` que retorna uma string representando a pessoa.

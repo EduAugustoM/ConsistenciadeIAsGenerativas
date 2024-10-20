@@ -1,0 +1,20 @@
+Aqui está uma implementação simples da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, genero):
+    self.nome = nome
+    self.idade = idade
+    self.genero = genero
+
+  def cumprimentar(self):
+    return f"Olá, meu nome é {self.nome}."
+
+  def mostrar_idade(self):
+    return f"Eu tenho {self.idade} anos."
+
+  def mostrar_genero(self):
+    return f"Eu sou do gênero {self.genero}."
+```
+
+Essa classe possui três atributos (`nome`, `idade` e `gênero`) e três métodos: `cumprimentar()`, `mostrar_idade()` e `mostrar_genero()`.
