@@ -1,0 +1,17 @@
+Para implementar uma classe chamada `Pessoa` em Python, você pode seguir o exemplo abaixo. Este exemplo mostra uma classe simples com um construtor que inicializa o nome e a idade da pessoa, e um método para exibir as informações da pessoa.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def exibir_informacoes(self):
+        print(f"Nome: {self.nome}, Idade: {self.idade}")
+
+# Exemplo de uso:
+pessoa1 = Pessoa("João", 30)
+pessoa1.exibir_informacoes()
+```
+
+Este é um exemplo básico, mas você pode adicionar mais métodos e propriedades à classe `Pessoa` para atender às suas necessidades específicas. Por exemplo, você pode adicionar métodos para atualizar a idade, alterar o nome, ou qualquer outra funcionalidade que seja relevante para o contexto da sua aplicação.

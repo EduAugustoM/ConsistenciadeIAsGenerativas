@@ -1,0 +1,167 @@
+# Classe Pessoa em Python
+====================================
+
+### Descrição
+
+A classe `Pessoa` é uma implementação básica de um objeto pessoa em Python. Ela possui atributos como nome, idade e endereço.
+
+### Código
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereço):
+        """
+        Inicializa a pessoa com o nome, idade e endereço.
+
+        Args:
+            nome (str): O nome da pessoa.
+            idade (int): A idade da pessoa.
+            endereço (str): O endereço da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereço = endereço
+
+    def __str__(self):
+        """
+        Devolve uma string com informações sobre a pessoa.
+
+        Returns:
+            str: Uma string com informações sobre a pessoa.
+        """
+        return f"Nome: {self.nome}\nIdade: {self.idade}\nEndereço: {self.endereço}"
+
+    def get_nome(self):
+        """
+        Retorna o nome da pessoa.
+
+        Returns:
+            str: O nome da pessoa.
+        """
+        return self.nome
+
+    def set_nome(self, nome):
+        """
+        Estabelece o nome da pessoa.
+
+        Args:
+            nome (str): O novo nome da pessoa.
+        """
+        self.nome = nome
+
+    def get_idade(self):
+        """
+        Retorna a idade da pessoa.
+
+        Returns:
+            int: A idade da pessoa.
+        """
+        return self.idade
+
+    def set_idade(self, idade):
+        """
+        Estabelece a idade da pessoa.
+
+        Args:
+            idade (int): A nova idade da pessoa.
+        """
+        self.idade = idade
+
+    def get_endereço(self):
+        """
+        Retorna o endereço da pessoa.
+
+        Returns:
+            str: O endereço da pessoa.
+        """
+        return self.endereço
+
+    def set_endereço(self, endereço):
+        """
+        Estabelece o endereço da pessoa.
+
+        Args:
+            endereço (str): O novo endereço da pessoa.
+        """
+        self.endereço = endereço
+```
+
+### Exemplo de Uso
+
+```python
+# Cria uma nova pessoa
+pessoa = Pessoa("João", 30, "Rua do Carmo, 123")
+
+# Imprime as informações da pessoa
+print(pessoa)
+
+# Altera a idade da pessoa
+pessoa.set_idade(31)
+print(pessoa.get_idade())
+
+# Altera o endereço da pessoa
+pessoa.set_endereço("Rua do Silveira, 456")
+print(pessoa.get_endereço())
+```
+
+### Acessando os Atributos
+
+Você pode acessar os atributos de uma pessoa usando as funções `get_` e `set_`. Por exemplo:
+
+```python
+# Acessa o nome da pessoa
+nome = pessoa.get_nome()
+print(nome)
+
+# Altera o nome da pessoa
+pessoa.set_nome("Maria")
+print(pessoa.get_nome())
+```
+
+### Evitando Usar Get E Set
+
+Para evitar a necessidade de usar `get_` e `set_`, você pode adicionar os atributos como propriedades ao objeto, como mostrado abaixo:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereço):
+        self._nome = nome
+        self._idade = idade
+        self._endereço = endereço
+
+    @property
+    def nome(self):
+        return self._nome
+
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+
+    @property
+    def idade(self):
+        return self._idade
+
+    @idade.setter
+    def idade(self, idade):
+        self._idade = idade
+
+    @property
+    def endereço(self):
+        return self._endereço
+
+    @endereço.setter
+    def endereço(self, endereço):
+        self._endereço = endereço
+```
+
+Com isso, você pode acessar os atributos como se fossem propriedades:
+
+```python
+pessoa = Pessoa("João", 30, "Rua do Carmo, 123")
+
+print(pessoa.nome)  # Imprime: João
+pessoa.nome = "Maria"
+print(pessoa.nome)  # Imprime: Maria
+```
+
+Essa abordagem é mais conveniente e fácil de usar.
