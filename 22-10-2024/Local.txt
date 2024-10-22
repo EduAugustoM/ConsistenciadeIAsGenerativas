@@ -1,0 +1,102 @@
+Classe Pessoa em Python
+==========================
+
+Aqui está uma implementação de uma classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+
+    Atributos:
+        - nome (str): Nome da pessoa.
+        - idade (int): Idade da pessoa.
+        - sexo (str): Sexo da pessoa ('masculino' ou 'feminino').
+    """
+
+    def __init__(self, nome, idade, sexo):
+        """
+        Inicializa a classe Pessoa.
+
+        :param nome: Nome da pessoa.
+        :param idade: Idade da pessoa.
+        :param sexo: Sexo da pessoa ('masculino' ou 'feminino').
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def get_nome(self):
+        """
+        Retorna o nome da pessoa.
+
+        :return: Nome da pessoa.
+        """
+        return self.nome
+
+    def get_idade(self):
+        """
+        Retorna a idade da pessoa.
+
+        :return: Idade da pessoa.
+        """
+        return self.idade
+
+    def get_sexo(self):
+        """
+        Retorna o sexo da pessoa.
+
+        :return: Sexo da pessoa ('masculino' ou 'feminino').
+        """
+        return self.sexo
+
+    def set_nome(self, nome):
+        """
+        Atualiza o nome da pessoa.
+
+        :param nome: Novo nome da pessoa.
+        """
+        self.nome = nome
+
+    def set_idade(self, idade):
+        """
+        Atualiza a idade da pessoa.
+
+        :param idade: Nova idade da pessoa.
+        """
+        self.idade = idade
+
+    def set_sexo(self, sexo):
+        """
+        Atualiza o sexo da pessoa.
+
+        :param sexo: Novo sexo da pessoa ('masculino' ou 'feminino').
+        """
+        if sexo in ['masculino', 'feminino']:
+            self.sexo = sexo
+        else:
+            raise ValueError("Sexo inválido. Deve ser 'masculino' ou 'feminino'.")
+
+    def __str__(self):
+        """
+        Retorna uma string que representa a pessoa.
+
+        :return: String que representa a pessoa.
+        """
+        return f"Pessoa - Nome: {self.nome}, Idade: {self.idade}, Sexo: {self.sexo}"
+
+# Exemplo de uso:
+pessoa = Pessoa("João", 30, "masculino")
+print(pessoa)
+pessoa.set_sexo("feminino")
+print(pessoa.get_sexo())
+```
+
+Nesta classe `Pessoa`, temos os seguintes métodos:
+
+*   `__init__`: Inicializa a classe com os atributos nome, idade e sexo.
+*   `get_nome`, `get_idade` e `get_sexo`: Retornam o valor dos atributos nome, idade e sexo respectivamente.
+*   `set_nome`, `set_idade` e `set_sexo`: Atualizam os valores dos atributos nome, idade e sexo respectivamente. A função `set_sexo` verifica se o sexo passado é válido.
+*   `__str__`: Retornar uma string que representa a pessoa de forma mais amigável.
+
+O exemplo de uso demonstra como criar uma instância da classe `Pessoa`, acessar seus atributos e modificar alguns deles.

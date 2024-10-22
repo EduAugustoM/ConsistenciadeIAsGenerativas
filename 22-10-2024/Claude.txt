@@ -1,0 +1,95 @@
+Let me create a simple yet functional implementation of a `Pessoa` class in Python.
+
+
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, cpf):
+        self.__nome = nome
+        self.__idade = idade
+        self.__cpf = cpf
+    
+    @property
+    def nome(self):
+        return self.__nome
+    
+    @nome.setter
+    def nome(self, novo_nome):
+        if isinstance(novo_nome, str) and novo_nome.strip():
+            self.__nome = novo_nome.strip()
+        else:
+            raise ValueError("Nome deve ser uma string não vazia")
+    
+    @property
+    def idade(self):
+        return self.__idade
+    
+    @idade.setter
+    def idade(self, nova_idade):
+        if isinstance(nova_idade, int) and nova_idade >= 0:
+            self.__idade = nova_idade
+        else:
+            raise ValueError("Idade deve ser um número inteiro positivo")
+    
+    @property
+    def cpf(self):
+        return self.__cpf
+    
+    @cpf.setter
+    def cpf(self, novo_cpf):
+        if isinstance(novo_cpf, str) and len(novo_cpf.replace(".", "").replace("-", "")) == 11:
+            self.__cpf = novo_cpf
+        else:
+            raise ValueError("CPF inválido")
+    
+    def fazer_aniversario(self):
+        self.__idade += 1
+        return f"{self.__nome} agora tem {self.__idade} anos!"
+    
+    def __str__(self):
+        return f"Nome: {self.__nome}, Idade: {self.__idade}, CPF: {self.__cpf}"
+
+    def __repr__(self):
+        return f"Pessoa(nome='{self.__nome}', idade={self.__idade}, cpf='{self.__cpf}')"
+
+```
+
+Esta implementação inclui:
+
+1. Atributos privados (encapsulamento):
+   - nome
+   - idade
+   - cpf
+
+2. Properties para acesso controlado aos atributos, com validações:
+   - Não aceita nome vazio
+   - Idade deve ser número positivo
+   - CPF deve ter 11 dígitos
+
+3. Métodos:
+   - `fazer_aniversario()`: incrementa a idade
+   - `__str__()`: representação em string para usuários
+   - `__repr__()`: representação em string para desenvolvedores
+
+Exemplo de uso:
+
+```python
+# Criando uma pessoa
+pessoa = Pessoa("João Silva", 25, "123.456.789-00")
+
+# Usando os getters
+print(pessoa.nome)  # João Silva
+print(pessoa.idade)  # 25
+
+# Usando os setters
+pessoa.nome = "João Santos"
+pessoa.idade = 26
+
+# Fazendo aniversário
+print(pessoa.fazer_aniversario())  # João Santos agora tem 27 anos!
+
+# Imprimindo a pessoa
+print(pessoa)  # Nome: João Santos, Idade: 27, CPF: 123.456.789-00
+```
+
+Gostaria que eu adicionasse mais alguma funcionalidade à classe?

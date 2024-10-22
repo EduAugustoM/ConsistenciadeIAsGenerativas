@@ -1,0 +1,26 @@
+Em Python, para implementar uma classe chamada `Pessoa`, você pode definir uma estrutura básica com métodos e atributos conforme a necessidade. Aqui está um exemplo simples de como você poderia criar uma classe `Pessoa` com alguns atributos básicos e métodos:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome} e tenho {self.idade} anos.")
+
+    def aniversario(self):
+        self.idade += 1
+        print(f"Uma nova idade! Agora tenho {self.idade} anos.")
+
+    def informacoes(self):
+        return f"Nome: {self.nome}, Idade: {self.idade}"
+
+# Exemplo de uso da classe Pessoa
+pessoa1 = Pessoa("João", 30)
+pessoa1.apresentar()
+pessoa1.aniversario()
+print(pessoa1.informacoes())
+```
+
+Neste exemplo, a classe `Pessoa` tem um construtor (`__init__`) que inicializa os atributos `nome` e `idade`. Há também três métodos: `apresentar`, que imprime uma mensagem de apresentação; `aniversario`, que incrementa a idade da pessoa e imprime uma mensagem; e `informacoes`, que retorna uma string com os dados da pessoa.

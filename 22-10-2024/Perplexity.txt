@@ -1,0 +1,58 @@
+## Implementação da Classe Pessoa em Python
+
+Abaixo, apresento uma implementação básica da classe `Pessoa` em Python. Essa classe incluirá atributos como nome, idade e métodos para exibir informações sobre a pessoa.
+
+### Código da Classe Pessoa
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        """Inicializa os atributos da pessoa."""
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        """Método para apresentar a pessoa."""
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+
+    def fazer_aniversario(self):
+        """Método para aumentar a idade da pessoa em um ano."""
+        self.idade += 1
+        return f"Feliz aniversário, {self.nome}! Agora você tem {self.idade} anos."
+
+# Exemplo de uso da classe
+if __name__ == "__main__":
+    # Criando uma instância da classe Pessoa
+    pessoa1 = Pessoa("João", 30)
+    
+    # Apresentando a pessoa
+    print(pessoa1.apresentar())
+    
+    # Fazendo aniversário
+    print(pessoa1.fazer_aniversario())
+```
+
+### Explicação do Código
+
+- **Construtor (`__init__`)**: Este método é chamado quando uma nova instância da classe é criada. Ele inicializa os atributos `nome` e `idade`.
+  
+- **Método `apresentar`**: Retorna uma string que apresenta a pessoa, incluindo seu nome e idade.
+  
+- **Método `fazer_aniversario`**: Aumenta a idade da pessoa em um ano e retorna uma mensagem de feliz aniversário.
+
+### Executando o Código
+
+Para executar o código:
+
+1. Copie o código acima para um arquivo com a extensão `.py`, por exemplo, `pessoa.py`.
+2. Execute o arquivo no terminal ou prompt de comando usando o seguinte comando:
+
+   ```bash
+   python pessoa.py
+   ```
+
+Isso exibirá a apresentação da pessoa e a mensagem de feliz aniversário.
+
+### Conclusão
+
+Essa implementação simples da classe `Pessoa` pode ser expandida com mais atributos e métodos conforme necessário, como endereço, telefone, ou métodos para alterar o nome. Sinta-se à vontade para personalizar conforme suas necessidades!
