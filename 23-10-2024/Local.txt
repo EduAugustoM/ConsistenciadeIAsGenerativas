@@ -1,0 +1,64 @@
+# Implementação da Classe Pessoa em Python
+=============================================
+
+Aqui está uma implementação simples da classe `Pessoa` em Python, incluindo os atributos básicos e métodos de acesso.
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    # Atributo inicializador com nome como string
+    def __init__(self, nome):
+        self._nome = nome  # Utilizando _ para atributos privados
+
+    # Método para obter o nome da pessoa
+    @property
+    def nome(self):
+        return self._nome
+
+    # Método para setar o nome da pessoa (método de acesso controlado)
+    @nome.setter
+    def nome(self, valor):
+        if not isinstance(valor, str) or len(valor) < 3:
+            raise ValueError("O nome deve ser uma string com mais de 2 caracteres.")
+        self._nome = valor
+
+    # Método para obter a idade da pessoa
+    @property
+    def idade(self):
+        return self._idade
+
+    # Método para setar a idade da pessoa (método de acesso controlado)
+    @idade.setter
+    def idade(self, valor):
+        if not isinstance(valor, int) or valor < 0:
+            raise ValueError("A idade deve ser um número inteiro não negativo.")
+        self._idade = valor
+
+# Exemplo de uso da classe Pessoa
+if __name__ == "__main__":
+    pessoa1 = Pessoa("João")
+    print(pessoa1.nome)
+    pessoa1.idade = 25
+    print(pessoa1.idade)
+
+# Tente setar um nome inválido e idade negativa para ver como ele queira lidar com isso
+pessoa2 = Pessoa("Jane")
+try:
+    pessoa2.nome = "abc"
+except ValueError as e:
+    print(e)
+pessoa2 = Pessoa("Maria")
+try:
+    pessoa2.idade = -1
+except ValueError as e:
+    print(e)
+```
+
+Neste exemplo, a classe `Pessoa` tem dois atributos: `nome` e `idade`, cada um com seu próprio método de acesso. Os métodos de acesso são usados para controlar a manipulação desses atributos, garantindo que eles sejam sempre mantidos em estado válido.
+
+-   O método `__init__` é o construtor da classe, usado para inicializar os atributos.
+-   A propriedade `nome` é um exemplo de uso do módulo Python `property`, que permite definir métodos de acesso para atributos.
+-   A classe também possui dois métodos de acesso controlados (`@nome.setter` e `@idade.setter`) para definir como os valores são ajustados.

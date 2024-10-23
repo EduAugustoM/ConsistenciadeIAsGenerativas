@@ -1,0 +1,106 @@
+```python
+class Pessoa:
+    def __init__(self, nome, idade, cpf):
+        self._nome = nome
+        self._idade = idade
+        self._cpf = cpf
+    
+    @property
+    def nome(self):
+        return self._nome
+    
+    @nome.setter
+    def nome(self, novo_nome):
+        if isinstance(novo_nome, str) and novo_nome.strip():
+            self._nome = novo_nome.strip()
+        else:
+            raise ValueError("Nome deve ser uma string não vazia")
+    
+    @property
+    def idade(self):
+        return self._idade
+    
+    @idade.setter
+    def idade(self, nova_idade):
+        if isinstance(nova_idade, int) and nova_idade >= 0:
+            self._idade = nova_idade
+        else:
+            raise ValueError("Idade deve ser um número inteiro positivo")
+    
+    @property
+    def cpf(self):
+        return self._cpf
+    
+    @cpf.setter
+    def cpf(self, novo_cpf):
+        if self.validar_cpf(novo_cpf):
+            self._cpf = novo_cpf
+        else:
+            raise ValueError("CPF inválido")
+    
+    @staticmethod
+    def validar_cpf(cpf):
+        # Remove caracteres não numéricos
+        cpf = ''.join(filter(str.isdigit, cpf))
+        
+        # Verifica se tem 11 dígitos
+        if len(cpf) != 11:
+            return False
+        
+        # Verifica se todos os dígitos são iguais
+        if len(set(cpf)) == 1:
+            return False
+            
+        # Validação dos dígitos verificadores
+        for i in range(9, 11):
+            soma = 0
+            for j in range(i):
+                soma += int(cpf[j]) * (i + 1 - j)
+            digito = (soma * 10) % 11
+            if digito == 10:
+                digito = 0
+            if str(digito) != cpf[i]:
+                return False
+        
+        return True
+    
+    def __str__(self):
+        return f"Nome: {self._nome}, Idade: {self._idade}, CPF: {self._cpf}"
+    
+    def __repr__(self):
+        return f"Pessoa(nome='{self._nome}', idade={self._idade}, cpf='{self._cpf}')"
+
+```
+
+Implementei uma classe Pessoa com as seguintes características:
+
+1. Atributos:
+   - nome (string)
+   - idade (inteiro)
+   - cpf (string)
+
+2. Funcionalidades:
+   - Propriedades com getters e setters para cada atributo
+   - Validações para cada campo
+   - Método estático para validar CPF
+   - Métodos especiais __str__ e __repr__
+
+Exemplo de uso:
+
+```python
+# Criando uma pessoa
+pessoa = Pessoa("Maria Silva", 30, "123.456.789-09")
+
+# Acessando atributos
+print(pessoa.nome)  # Maria Silva
+print(pessoa.idade)  # 30
+
+# Modificando atributos
+pessoa.idade = 31
+pessoa.nome = "Maria Santos"
+
+# Exibindo informações
+print(pessoa)  # Nome: Maria Santos, Idade: 31, CPF: 123.456.789-09
+```
+
+Quer que eu adicione alguma funcionalidade específica à classe?
