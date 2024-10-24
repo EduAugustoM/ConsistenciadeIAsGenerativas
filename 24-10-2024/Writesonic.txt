@@ -1,0 +1,31 @@
+
+
+Here is an implementation of the Pessoa class in Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, cpf):
+        self.nome = nome
+        self.idade = idade
+        self.cpf = cpf
+    
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome}, tenho {self.idade} anos e meu CPF é {self.cpf}.")
+```
+
+This class has three attributes - `nome`, `idade`, and `cpf` - which are set in the constructor (`__init__` method). It also has a `apresentar` method that prints out a message introducing the person.
+
+You can create an instance of the Pessoa class like this:
+
+```python
+pessoa = Pessoa("João", 35, "123.456.789-00")
+pessoa.apresentar()
+```
+
+This will output:
+
+```
+Olá, meu nome é João, tenho 35 anos e meu CPF é 123.456.789-00.
+```
+
+Let me know if you have any other questions!

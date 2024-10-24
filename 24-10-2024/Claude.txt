@@ -1,0 +1,41 @@
+Vou criar uma classe Pessoa com alguns atributos e métodos básicos:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, cpf):
+        self.nome = nome
+        self.idade = idade
+        self.cpf = cpf
+    
+    def fazer_aniversario(self):
+        self.idade += 1
+        return f"{self.nome} agora tem {self.idade} anos!"
+    
+    def apresentar(self):
+        return f"Olá! Meu nome é {self.nome}, tenho {self.idade} anos."
+    
+    def validar_cpf(self):
+        if len(self.cpf) == 11 and self.cpf.isdigit():
+            return True
+        return False
+```
+
+Você pode usar a classe assim:
+
+```python
+# Criando uma pessoa
+joao = Pessoa("João Silva", 25, "12345678901")
+
+# Usando os métodos
+print(joao.apresentar())  # Saída: Olá! Meu nome é João Silva, tenho 25 anos.
+print(joao.fazer_aniversario())  # Saída: João Silva agora tem 26 anos!
+print(joao.validar_cpf())  # Saída: True
+```
+
+Esta classe inclui:
+1. Construtor `__init__` com atributos básicos
+2. Método para fazer aniversário
+3. Método de apresentação
+4. Método para validar CPF
+
+Quer que eu adicione mais funcionalidades ou explique alguma parte específica?

@@ -1,0 +1,18 @@
+Beleza! Aqui está uma implementação básica de uma classe Pessoa em Python:
+
+python
+
+Copiar
+class Pessoa:
+    def __init__(self, nome, idade, cidade):
+        self.nome = nome
+        self.idade = idade
+        self.cidade = cidade
+
+    def cumprimentar(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos. Moro em {self.cidade}."
+
+# Exemplo de uso:
+pessoa1 = Pessoa("Maria", 30, "Indiara")
+print(pessoa1.cumprimentar())
+Com isso, você pode criar instâncias da classe Pessoa e usar o método cumprimentar para exibir uma mensagem personalizada. Algo assim pode ser um bom ponto de partida para expandir e adicionar mais funcionalidades.

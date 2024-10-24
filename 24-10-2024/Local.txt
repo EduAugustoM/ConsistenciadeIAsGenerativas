@@ -1,0 +1,88 @@
+**Implementação da Classe Pessoa em Python**
+
+Aqui está um exemplo de implementação da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, email):
+        """
+        Inicializa uma nova instância da classe Pessoa.
+
+        :param nome: O nome do indivíduo.
+        :param idade: A idade do indivíduo.
+        :param email: O endereço de e-mail do indivíduo.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.email = email
+
+    def __str__(self):
+        """
+        retorna uma string representando a pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Email:
+{self.email}"
+
+    def get_nome(self):
+        """
+        retorna o nome do indivíduo.
+        """
+        return self.nome
+
+    def set_nome(self, nome):
+        """
+        modifica o nome do indivíduo.
+        """
+        self.nome = nome
+
+    def get_idade(self):
+        """
+        retorna a idade do indivíduo.
+        """
+        return self.idade
+
+    def set_idade(self, idade):
+        """
+        modifica a idade do indivíduo.
+        """
+        self.idade = idade
+
+    def get_email(self):
+        """
+        retorna o endereço de e-mail do indivíduo.
+        """
+        return self.email
+
+    def set_email(self, email):
+        """
+        modifica o endereço de e-mail do indivíduo.
+        """
+        self.email = email
+```
+
+**Exemplos de Uso**
+
+```python
+# Cria uma nova instância da classe Pessoa
+pessoa1 = Pessoa("João", 30, "joao@example.com")
+print(pessoa1)  # imprime: Nome: João, Idade: 30, Email: joao@example.com
+
+# Modifica o nome e idade do indivíduo
+pessoa1.set_nome("Pedro")
+pessoa1.set_idade(31)
+print(pessoa1)  # imprime: Nome: Pedro, Idade: 31, Email: joao@example.com
+
+# Retornos os valores de acordo com os métodos get_*_()
+print(pessoa1.get_nome())  # imprime: Pedro
+print(pessoa1.get_idade())  # imprime: 31
+print(pessoa1.get_email())  # imprime: joao@example.com
+```
+
+**Observações**
+
+* A classe `Pessoa` tem um atributo `nome`, `idade` e `email`.
+* Os métodos `__str__` e os getters e setters são usados para manipular
+esses atributos.
+* O exemplo de uso demonstra como criar uma instância da classe, modificar
+seus atributos e utilizar os metodos get_*_() para obter os valores dos
+atributos.
