@@ -1,0 +1,65 @@
+Classe Pessoa em Python
+=======================
+
+Aqui está uma implementação básica de uma classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, sexo):
+        """
+        Inicializa uma nova instância da classe Pessoa.
+
+        Args:
+            nome (str): O nome do indivíduo.
+            idade (int): A idade do indivíduo.
+            sexo (str): O sexo do indivíduo.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def get_nome(self):
+        return self.nome
+
+    def get_idade(self):
+        return self.idade
+
+    def get_sexo(self):
+        return self.sexo
+
+    def set_nome(self, nome):
+        self.nome = nome
+
+    def set_idade(self, idade):
+        if idade < 0:
+            raise ValueError("Idade não pode ser negativa")
+        self.idade = idade
+
+    def set_sexo(self, sexo):
+        self.sexo = sexo
+
+    def __str__(self):
+        return f"Nome: {self.nome}\nIdade: {self.idade}\nSexo: {self.sexo}"
+
+# Exemplo de uso:
+pessoa = Pessoa("João", 30, "M")
+print(pessoa)
+```
+
+A classe `Pessoa` tem os seguintes atributos:
+
+*   **nome**: O nome do indivíduo.
+*   **idade**: A idade do indivíduo.
+*   **sexo**: O sexo do indivíduo.
+
+Os métodos da classe incluem:
+
+*   `get_nome()`: Retorna o nome do indivíduo.
+*   `get_idade()`: Retorname a idade do indivíduo.
+*   `get_sexo()`: Retorne o sexo do indivíduo.
+*   `set_nome(nome)`: Estabelece o nome do indivíduo.
+*   `set_idade(idade)`: Estabelece a idade do indivíduo, mas não permite valores negativos.
+*   `set_sexo(sexo)`: Estabelece o sexo do indivíduo.
+
+O método `__str__()`, implementado para que possamos converter uma instância da classe em uma string
+representativa, é usado no exemplo de uso.

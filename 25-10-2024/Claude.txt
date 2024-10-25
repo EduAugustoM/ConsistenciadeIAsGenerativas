@@ -1,0 +1,78 @@
+```python
+class Pessoa:
+    def __init__(self, nome, idade, cpf):
+        self._nome = nome
+        self._idade = idade
+        self._cpf = cpf
+    
+    @property
+    def nome(self):
+        return self._nome
+    
+    @nome.setter
+    def nome(self, novo_nome):
+        if isinstance(novo_nome, str) and novo_nome.strip():
+            self._nome = novo_nome.strip()
+        else:
+            raise ValueError("Nome deve ser uma string não vazia")
+    
+    @property
+    def idade(self):
+        return self._idade
+    
+    @idade.setter
+    def idade(self, nova_idade):
+        if isinstance(nova_idade, int) and nova_idade >= 0:
+            self._idade = nova_idade
+        else:
+            raise ValueError("Idade deve ser um número inteiro não negativo")
+    
+    @property
+    def cpf(self):
+        return self._cpf
+    
+    @cpf.setter
+    def cpf(self, novo_cpf):
+        if isinstance(novo_cpf, str) and len(novo_cpf.replace(".", "").replace("-", "")) == 11:
+            self._cpf = novo_cpf
+        else:
+            raise ValueError("CPF deve conter 11 dígitos")
+    
+    def fazer_aniversario(self):
+        self._idade += 1
+        return f"{self._nome} agora tem {self._idade} anos!"
+    
+    def __str__(self):
+        return f"Nome: {self._nome}, Idade: {self._idade}, CPF: {self._cpf}"
+
+```
+
+Criei uma classe Pessoa com as seguintes características:
+
+1. Atributos:
+   - nome
+   - idade
+   - cpf
+
+2. Recursos implementados:
+   - Properties para acesso seguro aos atributos
+   - Validações nos setters
+   - Método fazer_aniversario()
+   - Método __str__ para representação em string
+
+Exemplo de uso:
+
+```python
+# Criando uma pessoa
+pessoa = Pessoa("João Silva", 25, "123.456.789-00")
+
+# Usando os métodos
+print(pessoa)  # Nome: João Silva, Idade: 25, CPF: 123.456.789-00
+print(pessoa.fazer_aniversario())  # João Silva agora tem 26 anos!
+
+# Usando as properties
+pessoa.nome = "João Santos"
+print(pessoa.nome)  # João Santos
+```
+
+Gostaria que eu adicionasse mais alguma funcionalidade à classe?
