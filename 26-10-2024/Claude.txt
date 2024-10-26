@@ -1,0 +1,87 @@
+```python
+class Pessoa:
+    def __init__(self, nome, idade, cpf):
+        self.__nome = nome
+        self.__idade = idade
+        self.__cpf = cpf
+    
+    @property
+    def nome(self):
+        return self.__nome
+    
+    @nome.setter
+    def nome(self, novo_nome):
+        self.__nome = novo_nome
+    
+    @property
+    def idade(self):
+        return self.__idade
+    
+    @idade.setter
+    def idade(self, nova_idade):
+        if nova_idade >= 0:
+            self.__idade = nova_idade
+        else:
+            raise ValueError("Idade não pode ser negativa")
+    
+    @property
+    def cpf(self):
+        return self.__cpf
+    
+    def fazer_aniversario(self):
+        self.__idade += 1
+        return f"{self.__nome} agora tem {self.__idade} anos!"
+    
+    def __str__(self):
+        return f"Nome: {self.__nome}, Idade: {self.__idade}, CPF: {self.__cpf}"
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    # Criando uma pessoa
+    pessoa = Pessoa("João Silva", 25, "123.456.789-00")
+    
+    # Acessando atributos
+    print(pessoa.nome)  # usando o getter
+    print(pessoa.idade)  # usando o getter
+    
+    # Modificando atributos
+    pessoa.nome = "João Santos"  # usando o setter
+    pessoa.idade = 26  # usando o setter
+    
+    # Fazendo aniversário
+    print(pessoa.fazer_aniversario())
+    
+    # Imprimindo informações completas
+    print(pessoa)
+
+```
+
+Implementei uma classe Pessoa com as seguintes características:
+
+1. Atributos privados:
+   - nome
+   - idade
+   - cpf
+
+2. Métodos:
+   - Getters e setters para todos os atributos
+   - fazer_aniversario() para incrementar a idade
+   - __str__() para representação em string
+
+3. Recursos de encapsulamento:
+   - Uso de atributos privados (__)
+   - Properties para acesso controlado
+   - Validação de idade não negativa
+
+4. Exemplo de uso incluído no código
+
+Você pode usar a classe assim:
+
+```python
+pessoa = Pessoa("Maria", 30, "987.654.321-00")
+print(pessoa.nome)  # Maria
+pessoa.fazer_aniversario()  # Incrementa idade
+print(pessoa)  # Mostra todas as informações
+```
+
+Quer que eu adicione mais alguma funcionalidade à classe?

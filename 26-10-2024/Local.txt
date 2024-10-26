@@ -1,0 +1,106 @@
+**Classe Pessoa em Python**
+================================
+
+Aqui está uma implementação da classe `Pessoa` em Python, incluindo atributos e métodos básicos.
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    
+    Atributos:
+        nome (str): o nome da pessoa.
+        idade (int): a idade da pessoa.
+        sexo (str): o sexo da pessoa.
+    """
+
+    def __init__(self, nome, idade, sexo):
+        """
+        Método de inicialização da classe Pessoa.
+
+        Args:
+            nome (str): o nome da pessoa.
+            idade (int): a idade da pessoa.
+            sexo (str): o sexo da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def get_nome(self):
+        """
+        Método para obter o nome da pessoa.
+
+        Returns:
+            str: o nome da pessoa.
+        """
+        return self.nome
+
+    def get_idade(self):
+        """
+        Método para obter a idade da pessoa.
+
+        Returns:
+            int: a idade da pessoa.
+        """
+        return self.idade
+
+    def get_sexo(self):
+        """
+        Método para obter o sexo da pessoa.
+
+        Returns:
+            str: o sexo da pessoa.
+        """
+        return self.sexo
+
+    def set_idade(self, idade):
+        """
+        Método para alterar a idade da pessoa.
+
+        Args:
+            idade (int): a nova idade da pessoa.
+        """
+        if idade > 0:
+            self.idade = idade
+        else:
+            raise ValueError("Idade não pode ser negativa ou zero.")
+
+    def __str__(self):
+        """
+        Método para representar a pessoa de forma amigável.
+
+        Returns:
+            str: uma string que representa a pessoa.
+        """
+        return f"Pessoa {self.nome}, idade {self.idade}, sexo {self.sexo}"
+```
+
+**Exemplos de Uso**
+--------------------
+
+Aqui estão alguns exemplos de como usar a classe `Pessoa`:
+
+```python
+# Criar um objeto Pessoa
+pessoa = Pessoa("João", 30, "Masculino")
+
+# Obter os atributos da pessoa
+print(pessoa.get_nome())  # Saída: João
+print(pessoa.get_idade())  # Saída: 30
+print(pessoa.get_sexo())  # Saída: Masculino
+
+# Alterar a idade da pessoa
+pessoa.set_idade(31)
+print(pessoa.get_idade())  # Saída: 31
+
+# Representar a pessoa de forma amigável
+print(pessoa)  # Saída: Pessoa João, idade 31, sexo Masculino
+```
+
+**Notas**
+--------
+
+*   A classe `Pessoa` é uma classe abstrata, ou seja, não pode ser instanciada diretamente.
+*   Os métodos `get_nome`, `get_idade` e `get_sexo` devem ser usados para obter os atributos da pessoa, enquanto o método `set_idade` deve ser usado para alterar a idade da pessoa.
+*   O método `__str__` é usado para representar a pessoa de forma amigável.

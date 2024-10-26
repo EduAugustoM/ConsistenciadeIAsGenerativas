@@ -1,0 +1,28 @@
+Aqui está uma implementação simples da classe `Pessoa` em Python. Usei apenas dois espaços de indentação conforme solicitado:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, genero):
+    self.nome = nome
+    self.idade = idade
+    self.genero = genero
+
+  def cumprimentar(self):
+    print(f"Olá, meu nome é {self.nome}.")
+
+  def aniversario(self):
+    self.idade += 1
+    print(f"Feliz aniversário! Agora você tem {self.idade} anos.")
+```
+
+### Exemplo de uso:
+```python
+# Criando uma instância da classe Pessoa
+pessoa1 = Pessoa("Maria", 30, "Feminino")
+
+# Chamando os métodos
+pessoa1.cumprimentar()  # Saída: Olá, meu nome é Maria.
+pessoa1.aniversario()   # Saída: Feliz aniversário! Agora você tem 31 anos.
+```
+
+Essa classe básica inclui um método para cumprimentar e outro para aumentar a idade da pessoa em um ano a cada aniversário.

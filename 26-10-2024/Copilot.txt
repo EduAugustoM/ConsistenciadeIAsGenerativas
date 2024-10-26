@@ -1,0 +1,19 @@
+Certo, aqui está um exemplo simples de como implementar a classe Pessoa em Python:
+
+python
+
+Copiar
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def cumprimentar(self):
+        print(f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos.")
+
+# Exemplo de uso
+p1 = Pessoa("João", 30)
+p1.cumprimentar()
+Este código define uma classe Pessoa com dois atributos (nome e idade) e um método (cumprimentar). A instância da classe é criada com p1, e ao chamar p1.cumprimentar(), a mensagem de cumprimento é exibida.
+
+Algo específico que você gostaria de adicionar ou mudar?
