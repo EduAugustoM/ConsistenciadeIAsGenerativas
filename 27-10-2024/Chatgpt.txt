@@ -1,0 +1,28 @@
+Aqui está uma implementação básica da classe `Pessoa` em Python, com atributos como `nome`, `idade` e `endereco`, além de métodos simples para apresentar e atualizar esses atributos:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade, endereco):
+    self.nome = nome
+    self.idade = idade
+    self.endereco = endereco
+
+  def apresentar(self):
+    return f"Nome: {self.nome}, Idade: {self.idade}, Endereço: {self.endereco}"
+
+  def atualizar_endereco(self, novo_endereco):
+    self.endereco = novo_endereco
+    return f"Endereço atualizado para: {self.endereco}"
+
+# Exemplo de uso
+pessoa = Pessoa("João", 30, "Rua das Flores, 123")
+print(pessoa.apresentar())
+
+pessoa.atualizar_endereco("Avenida Central, 456")
+print(pessoa.apresentar())
+```
+
+### Explicação:
+- **`__init__`**: Inicializa os atributos `nome`, `idade` e `endereco`.
+- **`apresentar`**: Retorna uma string com as informações da pessoa.
+- **`atualizar_endereco`**: Permite alterar o endereço da pessoa.

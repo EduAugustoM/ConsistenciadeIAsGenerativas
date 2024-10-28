@@ -1,0 +1,32 @@
+Para implementar uma classe `Pessoa` em Python, você precisa definir uma classe com o nome `Pessoa` e então adicionar métodos e atributos que representem as características e comportamentos de uma pessoa. Abaixo está um exemplo de como você pode criar uma classe `Pessoa` com atributos como nome, idade e endereço, além de métodos para exibir as informações da pessoa:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def exibir_informacoes(self):
+        print(f"Nome: {self.nome}")
+        print(f"Idade: {self.idade}")
+        print(f"Endereço: {self.endereco}")
+
+    def fazer_aniversario(self):
+        self.idade += 1
+        print(f"{self.nome} fez aniversário e agora tem {self.idade} anos.")
+
+    def mudar_endereco(self, novo_endereco):
+        self.endereco = novo_endereco
+        print(f"{self.nome} mudou de endereço para {self.endereco}.")
+
+# Exemplo de uso da classe Pessoa
+pessoa1 = Pessoa("João da Silva", 30, "Rua Sol Nascente, 123")
+pessoa1.exibir_informacoes()
+
+pessoa1.fazer_aniversario()
+
+pessoa1.mudar_endereco("Av. Brasil, 456")
+```
+
+Neste exemplo, a classe `Pessoa` tem um construtor (`__init__`) que inicializa os atributos `nome`, `idade` e `endereco`. Há também os métodos `exibir_informacoes`, que imprime os detalhes da pessoa, `fazer_aniversario`, que aumenta a idade da pessoa em 1, e `mudar_endereco`, que atualiza o endereço da pessoa.

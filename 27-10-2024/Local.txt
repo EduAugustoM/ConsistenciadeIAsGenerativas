@@ -1,0 +1,115 @@
+**Classe Pessoa em Python**
+================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python, com atributos e métodos para representar um indivíduo.
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    def __init__(self, nome, idade, sexo):
+        """
+        Inicializa a pessoa com o nome, idade e sexo.
+
+        :param nome: Nome da pessoa.
+        :type nome: str
+        :param idade: Idade da pessoa.
+        :type idade: int
+        :param sexo: Sexo da pessoa (masculino ou feminino).
+        :type sexo: str
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def get_nome(self):
+        """
+        Retorna o nome da pessoa.
+
+        :return: Nome da pessoa.
+        :rtype: str
+        """
+        return self.nome
+
+    def get_idade(self):
+        """
+        Retorna a idade da pessoa.
+
+        :return: Idade da pessoa.
+        :rtype: int
+        """
+        return self.idade
+
+    def get_sexo(self):
+        """
+        Retorna o sexo da pessoa.
+
+        :return: Sexo da pessoa.
+        :rtype: str
+        """
+        return self.sexo
+
+    def set_nome(self, nome):
+        """
+        Atualiza o nome da pessoa.
+
+        :param nome: Novo nome da pessoa.
+        :type nome: str
+        """
+        self.nome = nome
+
+    def set_idade(self, idade):
+        """
+        Atualiza a idade da pessoa.
+
+        :param idade: Nova idade da pessoa.
+        :type idade: int
+        """
+        self.idade = idade
+
+    def set_sexo(self, sexo):
+        """
+        Atualiza o sexo da pessoa.
+
+        :param sexo: Novo sexo da pessoa.
+        :type sexo: str
+        """
+        self.sexo = sexo
+
+    def __str__(self):
+        """
+        Retorna uma string representando a pessoa.
+
+        :return: String representando a pessoa.
+        :rtype: str
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Sexo: {self.sexo}"
+```
+
+**Exemplo de Uso**
+--------------------
+
+```python
+# Crie uma nova pessoa
+pessoa = Pessoa("João", 30, "masculino")
+
+# Acesse os atributos da pessoa
+print(pessoa.get_nome())  # Imprime: João
+print(pessoa.get_idade())  # Imprime: 30
+print(pessoa.get_sexo())  # Imprime: masculino
+
+# Atualize o nome e idade da pessoa
+pessoa.set_nome("Pedro")
+pessoa.set_idade(35)
+
+# Acesse os atributos atualizados
+print(pessoa.get_nome())  # Imprime: Pedro
+print(pessoa.get_idade())  # Imprime: 35
+
+# Retorne uma string representando a pessoa
+print(pessoa)  # Imprime: Nome: Pedro, Idade: 35, Sexo: masculino
+```
+
+Essa classe `Pessoa` oferece métodos para acessar e alterar os atributos da pessoa, além de um método `__str__` para retornar uma string representando a pessoa.

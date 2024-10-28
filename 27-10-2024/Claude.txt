@@ -1,0 +1,116 @@
+```python
+class Pessoa:
+    """
+    Classe que representa uma pessoa com atributos básicos e métodos
+    para manipulação de suas informações.
+    """
+    
+    def __init__(self, nome, idade, cpf):
+        """
+        Inicializa uma nova pessoa.
+        
+        Args:
+            nome (str): Nome completo da pessoa
+            idade (int): Idade da pessoa em anos
+            cpf (str): CPF da pessoa (apenas números)
+        """
+        self._nome = nome
+        self._idade = idade
+        self._cpf = self._validar_cpf(cpf)
+        self._endereco = None
+    
+    def _validar_cpf(self, cpf):
+        """Método privado para validação básica do CPF"""
+        cpf_limpo = ''.join(filter(str.isdigit, cpf))
+        if len(cpf_limpo) != 11:
+            raise ValueError("CPF deve conter 11 dígitos")
+        return cpf_limpo
+    
+    @property
+    def nome(self):
+        """Retorna o nome da pessoa"""
+        return self._nome
+    
+    @nome.setter
+    def nome(self, novo_nome):
+        """Define um novo nome para a pessoa"""
+        if not isinstance(novo_nome, str):
+            raise TypeError("Nome deve ser uma string")
+        if len(novo_nome.strip()) == 0:
+            raise ValueError("Nome não pode estar vazio")
+        self._nome = novo_nome
+    
+    @property
+    def idade(self):
+        """Retorna a idade da pessoa"""
+        return self._idade
+    
+    @idade.setter
+    def idade(self, nova_idade):
+        """Define uma nova idade para a pessoa"""
+        if not isinstance(nova_idade, int):
+            raise TypeError("Idade deve ser um número inteiro")
+        if nova_idade < 0:
+            raise ValueError("Idade não pode ser negativa")
+        self._idade = nova_idade
+    
+    @property
+    def cpf(self):
+        """Retorna o CPF da pessoa"""
+        return self._cpf
+    
+    def definir_endereco(self, rua, numero, cidade, estado):
+        """
+        Define o endereço completo da pessoa.
+        
+        Args:
+            rua (str): Nome da rua
+            numero (str): Número do endereço
+            cidade (str): Nome da cidade
+            estado (str): Sigla do estado
+        """
+        self._endereco = {
+            'rua': rua,
+            'numero': numero,
+            'cidade': cidade,
+            'estado': estado.upper()
+        }
+    
+    def obter_endereco(self):
+        """Retorna o endereço completo formatado ou None se não definido"""
+        if self._endereco is None:
+            return None
+        return f"{self._endereco['rua']}, {self._endereco['numero']} - {self._endereco['cidade']}/{self._endereco['estado']}"
+    
+    def __str__(self):
+        """Retorna uma representação em string da pessoa"""
+        return f"Nome: {self._nome}, Idade: {self._idade}, CPF: {self._cpf}"
+
+```
+
+Criei uma classe Pessoa completa com várias funcionalidades úteis. Aqui está como você pode usar:
+
+```python
+# Criar uma nova pessoa
+pessoa = Pessoa("João Silva", 30, "12345678901")
+
+# Usar os getters e setters
+print(pessoa.nome)  # João Silva
+pessoa.idade = 31   # Altera a idade
+
+# Definir endereço
+pessoa.definir_endereco("Rua das Flores", "123", "São Paulo", "SP")
+print(pessoa.obter_endereco())  # Rua das Flores, 123 - São Paulo/SP
+
+# Impressão formatada
+print(pessoa)  # Nome: João Silva, Idade: 31, CPF: 12345678901
+```
+
+A classe inclui:
+1. Validação básica de dados
+2. Propriedades com getters e setters
+3. Gerenciamento de endereço
+4. Formatação de string
+5. Encapsulamento adequado com atributos protegidos
+
+Quer que eu adicione mais alguma funcionalidade ou explique alguma parte específica?
