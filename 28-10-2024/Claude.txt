@@ -1,0 +1,32 @@
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+        
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos.")
+        
+    def comemorar_aniversario(self):
+        self.idade += 1
+        print(f"{self.nome} acabou de fazer {self.idade} anos!")
+
+```
+
+Nesta implementação, a classe `Pessoa` tem os seguintes atributos e métodos:
+
+- `__init__(self, nome, idade)`: O construtor da classe, que inicializa o nome e a idade da pessoa.
+- `apresentar(self)`: Um método que imprime uma mensagem de apresentação da pessoa.
+- `comemorar_aniversario(self)`: Um método que incremente a idade da pessoa em 1 ano e imprime uma mensagem de comemoração.
+
+Você pode usar essa classe da seguinte forma:
+
+```python
+pessoa1 = Pessoa("João", 30)
+pessoa1.apresentar()  # Olá, meu nome é João e eu tenho 30 anos.
+pessoa1.comemorar_aniversario()  # João acabou de fazer 31 anos!
+```
+
+Essa é uma implementação bastante básica, mas você pode adicionar mais atributos e métodos conforme necessário para representar as características e comportamentos de uma pessoa em seu programa.

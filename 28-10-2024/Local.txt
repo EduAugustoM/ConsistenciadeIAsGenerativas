@@ -1,0 +1,92 @@
+**Classe Pessoa em Python**
+=====================================
+
+Aqui está uma implementação básica da classe Pessoa em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, endereço):
+        """
+        Inicializa um objeto Pessoa.
+
+        :param nome: Nome da pessoa.
+        :param idade: Idade da pessoa.
+        :param endereço: Endereço da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereço = endereço
+
+    def get_nome(self):
+        """
+        Retorna o nome da pessoa.
+
+        :return: Nome da pessoa.
+        """
+        return self.nome
+
+    def get_idade(self):
+        """
+        Retorna a idade da pessoa.
+
+        :return: Idade da pessoa.
+        """
+        return self.idade
+
+    def get_endereço(self):
+        """
+        Retorna o endereço da pessoa.
+
+        :return: Endereço da pessoa.
+        """
+        return self.endereço
+
+    def set_nome(self, nome):
+        """
+        Atualiza o nome da pessoa.
+
+        :param nome: Nome novo para a pessoa.
+        """
+        self.nome = nome
+
+    def set_idade(self, idade):
+        """
+        Atualiza a idade da pessoa.
+
+        :param idade: Idade nova para a pessoa.
+        """
+        self.idade = idade
+
+    def set_endereço(self, endereço):
+        """
+        Atualiza o endereço da pessoa.
+
+        :param endereço: Endereço novo para a pessoa.
+        """
+        self.endereço = endereço
+
+
+# Exemplo de uso:
+pessoa1 = Pessoa("João", 30, "Rua das Rosas")
+print(pessoa1.get_nome())  # Saída: João
+print(pessoa1.get_idade())  # Saída: 30
+print(pessoa1.get_endereço())  # Saída: Rua das Rosas
+
+pessoa1.set_nome("Pedro")
+pessoa1.set_idade(31)
+pessoa1.set_endereço("Rua das Estrelas")
+
+print(pessoa1.get_nome())  # Saída: Pedro
+print(pessoa1.get_idade())  # Saída: 31
+print(pessoa1.get_endereço())  # Saída: Rua das Estrelas
+```
+
+**Explicação**
+
+*   A classe `Pessoa` tem um atributo `nome`, que é inicializado no construtor (`__init__`) com o parâmetro `nome`.
+*   O construtor também recebe os atributos `idade` e `endereço`, que são inicializados com os respectivos valores.
+*   As métodos `get_nome`, `get_idade` e `get_endereço` retornam os valores dos atributos correspondentes. Os métodos `set_nome`, `set_idade` e `set_endereço` atualizam os valores dos atributos correspondentes.
+
+**Conclusão**
+
+A classe `Pessoa` fornece uma estrutura básica para representar pessoas, com métodos para acessar e modificar seus atributos. Isso permite uma fácil implementação de aplicativos que lidem com informações sobre pessoas.
