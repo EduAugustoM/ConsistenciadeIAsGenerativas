@@ -1,0 +1,108 @@
+**Classe Pessoa em Python**
+
+Aqui está uma implementação básica da classe Pessoa em Python:
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    def __init__(self, nome, idade, sexo):
+        """
+        Método de inicialização.
+
+        Args:
+            nome (str): O nome da pessoa.
+            idade (int): A idade da pessoa.
+            sexo (str): O sexo da pessoa.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
+
+    def __str__(self):
+        """
+        Método de representação.
+
+        Returns:
+            str: Uma string com a informação da pessoa.
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Sexo: {self.sexo}"
+
+    @property
+    def idade(self):
+        """
+        Propriedade para acessar a idade da pessoa.
+
+        Returns:
+            int: A idade da pessoa.
+        """
+        return self._idade
+
+    @idade.setter
+    def idade(self, valor):
+        """
+        Método de setagem para a idade da pessoa.
+
+        Args:
+            valor (int): O novo valor para a idade.
+        """
+        if isinstance(valor, int) and valor >= 0:
+            self._idade = valor
+        else:
+            raise ValueError("Idade inválida")
+
+    @property
+    def nome(self):
+        """
+        Propriedade para acessar o nome da pessoa.
+
+        Returns:
+            str: O nome da pessoa.
+        """
+        return self._nome
+
+    @nome.setter
+    def nome(self, valor):
+        """
+        Método de setagem para o nome da pessoa.
+
+        Args:
+            valor (str): O novo valor para o nome.
+        """
+        if isinstance(valor, str):
+            self._nome = valor
+        else:
+            raise ValueError("Nome inválido")
+```
+
+**Exemplo de uso:**
+
+```python
+# Criação de uma nova pessoa
+pessoa = Pessoa("João", 30, "Masculino")
+
+# Acesso às informações da pessoa
+print(pessoa)  # Nome: João, Idade: 30, Sexo: Masculino
+
+# Alteração de idade
+pessoa.idade = 31
+print(pessoa.idade)  # 31
+
+# Tentativa de alterar idade inválida
+try:
+    pessoa.idade = -1
+except ValueError as e:
+    print(e)
+
+# Alteração de nome
+pessoa.nome = "Pedro"
+print(pessoa.nome)  # Pedro
+```
+
+**Observações:**
+
+*   A classe Pessoa possui um método de inicialização (`__init__`) que recebe os parâmetros `nome`, `idade` e `sexo`.
+*   O método `__str__` retorna uma string com a informação da pessoa.
+*   As propriedades `idade` e `nome` são definidas como getters e setters para controlar a alteração desses valores.

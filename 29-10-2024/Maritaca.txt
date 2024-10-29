@@ -1,0 +1,29 @@
+Em Python, uma classe é um modelo ou protótipo a partir do qual objetos são criados. Abaixo está um exemplo de como você pode implementar uma classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        print(f"Meu nome é {self.nome} e tenho {self.idade} anos.")
+
+    def fazer_aniversario(self):
+        self.idade += 1
+        print(f"Uma vela a mais no bolo! Agora tenho {self.idade} anos.")
+
+# Exemplo de uso da classe Pessoa:
+pessoa1 = Pessoa("Alice", 30)
+pessoa1.apresentar()
+
+pessoa2 = Pessoa("Bob", 25)
+pessoa2.apresentar()
+
+# Fazendo aniversário para a pessoa1
+pessoa1.fazer_aniversario()
+```
+
+Neste exemplo, `Pessoa` é uma classe com dois atributos: `nome` e `idade`, que são definidos no método `__init__`, que é o construtor da classe. A classe também tem dois métodos: `apresentar`, que imprime informações sobre a pessoa, e `fazer_aniversario`, que incrementa a idade da pessoa em um ano e imprime uma mensagem de aniversário.
+
+Para criar uma instância da classe `Pessoa`, você precisa passar um nome e uma idade como argumentos ao construtor. Depois, você pode chamar os métodos `apresentar` e `fazer_aniversario` para interagir com a instância criada.

@@ -1,0 +1,22 @@
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+  def __init__(self, nome, idade):
+    self.nome = nome
+    self.idade = idade
+
+  def cumprimentar(self):
+    return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+```
+
+Essa classe `Pessoa` possui:
+- **Atributos** `nome` e `idade` definidos pelo construtor (`__init__`).
+- **Método** `cumprimentar` que retorna uma saudação com o nome e a idade da pessoa. 
+
+Exemplo de uso:
+
+```python
+pessoa1 = Pessoa("João", 30)
+print(pessoa1.cumprimentar())  # Saída: Olá, meu nome é João e tenho 30 anos.
+```

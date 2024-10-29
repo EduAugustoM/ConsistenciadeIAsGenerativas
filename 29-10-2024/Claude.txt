@@ -1,0 +1,43 @@
+Vou criar uma classe Pessoa com alguns atributos e métodos básicos em Python.
+
+
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade, cpf):
+        self.nome = nome
+        self.idade = idade
+        self.__cpf = cpf  # atributo privado
+        
+    def fazer_aniversario(self):
+        self.idade += 1
+        print(f"Feliz aniversário! {self.nome} agora tem {self.idade} anos!")
+    
+    def apresentar(self):
+        return f"Olá! Meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def get_cpf(self):
+        return self.__cpf[:3] + ".***.***-**"  # retorna CPF parcialmente oculto
+```
+
+Você pode usar a classe assim:
+
+```python
+# Criando uma nova pessoa
+pessoa1 = Pessoa("João", 25, "123.456.789-00")
+
+# Usando os métodos
+print(pessoa1.apresentar())  # Saída: Olá! Meu nome é João e tenho 25 anos.
+pessoa1.fazer_aniversario()  # Saída: Feliz aniversário! João agora tem 26 anos!
+print(pessoa1.get_cpf())     # Saída: 123.***.***-**
+```
+
+Características da classe implementada:
+1. Atributos básicos: nome, idade e CPF
+2. CPF é um atributo privado (note o duplo underscore)
+3. Métodos para:
+   - Fazer aniversário (aumenta a idade)
+   - Apresentar a pessoa
+   - Obter o CPF de forma segura (parcialmente oculto)
+
+Posso adicionar mais funcionalidades se você precisar, como validação de CPF, outros atributos ou métodos específicos. O que você gostaria de modificar?
