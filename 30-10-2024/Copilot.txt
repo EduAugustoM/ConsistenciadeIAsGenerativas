@@ -1,0 +1,17 @@
+Claro! Aqui está um exemplo básico de uma classe Pessoa em Python:
+
+python
+
+Copiar
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def cumprimentar(self):
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+
+# Exemplo de uso
+pessoa = Pessoa("João", 30)
+print(pessoa.cumprimentar())
+Isso define uma classe Pessoa com os atributos nome e idade, e um método cumprimentar que retorna uma saudação personalizada. Quer personalizar ou adicionar algo mais a essa classe?

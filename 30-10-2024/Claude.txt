@@ -1,0 +1,43 @@
+Eis uma implementação básica da classe Pessoa em Python:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos.")
+```
+
+Essa classe `Pessoa` possui dois atributos: `nome` e `idade`. O método `__init__` é o construtor, que é chamado quando criamos uma nova instância da classe.
+
+O método `apresentar` imprime uma mensagem de apresentação usando os valores dos atributos `nome` e `idade`.
+
+Para usar essa classe, você pode criar uma instância e chamar o método `apresentar`:
+
+```python
+pessoa = Pessoa("João", 30)
+pessoa.apresentar()
+```
+
+Isso imprimiria:
+
+```
+Olá, meu nome é João e eu tenho 30 anos.
+```
+
+Você pode modificar os atributos da pessoa depois de criá-la, por exemplo:
+
+```python
+pessoa.idade = 31
+pessoa.apresentar()
+```
+
+Isso imprimiria:
+
+```
+Olá, meu nome é João e eu tenho 31 anos.
+```
+
+Espero que esta implementação básica da classe Pessoa seja útil! Deixe-me saber se você tiver alguma outra dúvida.

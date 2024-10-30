@@ -1,0 +1,49 @@
+Claro! Abaixo está um exemplo de como implementar uma classe `Pessoa` em Python. Essa classe incluirá atributos básicos como nome, idade e uma breve descrição, além de métodos para exibir informações sobre a pessoa.
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        """
+        Inicializa a classe Pessoa com nome e idade.
+
+        :param nome: str - Nome da pessoa
+        :param idade: int - Idade da pessoa
+        """
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        """
+        Método para apresentar a pessoa.
+        """
+        return f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos."
+
+    def aniversario(self):
+        """
+        Método para incrementar a idade da pessoa em um ano.
+        """
+        self.idade += 1
+        return f"Feliz aniversário, {self.nome}! Agora você tem {self.idade} anos."
+
+# Exemplo de uso da classe Pessoa
+if __name__ == "__main__":
+    pessoa1 = Pessoa("João", 30)
+    print(pessoa1.apresentar())
+    print(pessoa1.aniversario())
+```
+
+## Explicação do Código
+
+### 1. Inicialização da Classe
+- O método `__init__` é o construtor da classe. Ele é chamado quando uma nova instância da classe é criada. Aqui, estamos definindo dois atributos: `nome` e `idade`.
+
+### 2. Método `apresentar`
+- Este método retorna uma string que apresenta a pessoa, incluindo seu nome e idade.
+
+### 3. Método `aniversario`
+- Este método aumenta a idade da pessoa em um ano e retorna uma mensagem de feliz aniversário.
+
+### 4. Exemplo de Uso
+- No bloco `if __name__ == "__main__":`, criamos uma instância da classe `Pessoa` e chamamos os métodos para demonstrar sua funcionalidade.
+
+Sinta-se à vontade para modificar ou expandir essa classe conforme necessário!

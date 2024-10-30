@@ -1,0 +1,65 @@
+# Implementação da Classe Pessoa em Python
+=====================================================
+
+Nesta seção, vamos criar uma classe `Pessoa` em Python que representará um indivíduo com informações básicas como nome, idade e endereço.
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    def __init__(self, nome, idade, endereco):
+        """
+        Inicializador da classe Pessoa.
+
+        :param nome: Nome do indivíduo.
+        :param idade: Idade do indivíduo.
+        :param endereco: Endereço do indivíduo.
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+
+    def __str__(self):
+        """
+        Representação da classe Pessoa como uma string.
+
+        :return: String que representa a pessoa.
+        """
+        return f"Nome: {self.nome}\nIdade: {self.idade} anos\nEndereço: {self.endereco}"
+
+    @property
+    def nomeCompleto(self):
+        """
+        Propriedade que retorna o nome completo do indivíduo.
+
+        :return: Nome completo do indivíduo.
+        """
+        return f"{self.nome} (Idade: {self.idade})"
+
+    @property
+    def idadeStr(self):
+        """
+        Propriedade que retorna a idade em uma string formatada.
+
+        :return: Idade da pessoa como uma string.
+        """
+        return f"Idade: {self.idade} anos"
+
+
+# Exemplo de uso da classe Pessoa
+if __name__ == "__main__":
+    pessoa1 = Pessoa("João", 30, "Rua das Acácias, 123 - Cidade")
+    pessoa2 = Pessoa("Maria", 25, "Avenida dos Sonhos, 456 - Cidade")
+
+    print(pessoa1)
+    print("\n" + pessoa2.nameCompleto)
+
+```
+
+Nesta implementação da classe `Pessoa`, podemos ver os seguintes aspectos:
+
+*   A classe tem um inicializador (`__init__`) que recebe os dados de entrada para a instância da classe.
+*   O método `__str__` é usado para retornar uma string formatada que representa o objeto da classe, que pode ser usado para impressão ou outros propósitos.
+*   As propriedades são definidas com o caractere `@property` e retornam valores calculados ou acessados, permitindo uma melhor organização do código.
