@@ -1,0 +1,17 @@
+Python é ótimo para isso. Uma classe Pessoa básica poderia ser algo assim:
+
+python
+
+Copiar
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def cumprimentar(self):
+        return f'Olá, meu nome é {self.nome} e eu tenho {self.idade} anos.'
+
+# Exemplo de uso
+p = Pessoa('Ana', 30)
+print(p.cumprimentar())
+Isso cria uma classe simples com nome e idade, e um método para se apresentar. Quer adicionar mais funcionalidades?

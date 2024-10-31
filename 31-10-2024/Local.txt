@@ -1,0 +1,73 @@
+**Classe Pessoa em Python**
+=====================================
+
+Aqui está uma implementação básica da classe `Pessoa` em Python:
+
+```python
+class Pessoa:
+    """
+    Classe para representar uma pessoa.
+    """
+
+    def __init__(self, nome, idade, endereço):
+        """
+        Inicializa uma pessoa com o nome, idade e endereço.
+
+        :param nome: O nome da pessoa.
+        :type nome: str
+        :param idade: A idade da pessoa.
+        :type idade: int
+        :param endereço: O endereço da pessoa.
+        :type endereço: dict
+        """
+        self.nome = nome
+        self.idade = idade
+        self.endereço = endereço
+
+    def __str__(self):
+        """
+        Retorna uma string que representa a pessoa.
+
+        :return: Uma string que representa a pessoa.
+        :rtype: str
+        """
+        return f"Nome: {self.nome}, Idade: {self.idade}, Endereço: {self.endereço}"
+
+    def get_endereço(self):
+        """
+        Retornado o endereço da pessoa.
+
+        :return: O endereço da pessoa.
+        :rtype: dict
+        """
+        return self.endereço
+
+    def set_endereço(self, endereço):
+        """
+        Atualiza o endereço da pessoa.
+
+        :param endereço: O novo endereço da pessoa.
+        :type endereço: dict
+        """
+        self.endereço = endereço
+
+
+# Exemplo de uso:
+
+pessoa1 = Pessoa("João", 30, {"rua": "Main St", "bairro": "Centro"})
+print(pessoa1)  # Nome: João, Idade: 30, Endereço: {'rua': 'Main St', 'bairro': 'Centro'}
+
+endereço2 = pessoa1.get_endereço()
+pessoa1.set_endereço({"rua": "Street A", "bairro": "East Side"})
+print(pessoa1)  # Nome: João, Idade: 30, Endereço: {'rua': 'Street A', 'bairro': 'East Side'}
+```
+
+**Explicação**
+
+A classe `Pessoa` é uma implementação básica de uma pessoa com atributos como nome, idade e endereço. Ela possui métodos para acessar e alterar esses atributos.
+
+*   O método `__init__` é chamado quando uma nova instância da classe é criada. Ele recebe os parâmetros `nome`, `idade` e `endereço` e as atribui às variáveis correspondentes.
+*   O método `__str__` retorna uma string que representa a pessoa, incluindo seu nome, idade e endereço.
+*   Os métodos `get_endereço` e `set_endereço` permitem acessar e alterar o endereço da pessoa, respectivamente.
+
+O exemplo de uso demonstra como criar uma instância da classe `Pessoa`, acessar seus atributos e alterá-los.
